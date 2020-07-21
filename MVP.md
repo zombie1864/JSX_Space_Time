@@ -2,7 +2,7 @@
 The following will highlight key features of the cloned website PBS Space Time. A website tailored for public education, specifically towards a STEM field with a focus on Physics. Topics include, Mechanical Physics, Electrodynamics, Quantum Mechanics, Thermodynamics, General Relativitym and much more. Each video content is provided by theoretical astrophysicist Matthew J. O’Dowd, Dept. of Physics and Astronomy, Lehman College, CUNY. 
 
 ## Demo UI 
-- Users that test key features such as signing up/ loggin/ log out. 
+- Users can test key features such as signing up/ loggin/ log out. 
 - Clicks on videos will stream video content to user regardless of user loggin. 
 - Transactions such as buying or donating will require user authentication. 
 
