@@ -1,0 +1,27 @@
+Started GET "/" for ::1 at 2020-07-27 15:34:19 -0400
+
+ActiveRecord::NoDatabaseError - FATAL:  database "PBS_SPACE_CLONE__development" does not exist
+:
+
+Started POST "/__better_errors/449f403bf8773e37/variables" for ::1 at 2020-07-27 15:34:19 -0400
+  [1m[35m (592.4ms)[0m  [1m[35mCREATE DATABASE "PBS_SPACE_CLONE__development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (99.6ms)[0m  [1m[35mCREATE DATABASE "PBS_SPACE_CLONE__test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (75.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (54.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2805235997086680465)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20200727194211)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (20.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20200727194211_create_users.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2805235997086680465)[0m
+  ↳ bin/rails:9
