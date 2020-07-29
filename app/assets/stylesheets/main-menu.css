@@ -1,12 +1,13 @@
 .main-menu {
     background-color: rgb(24, 36, 126);
+    align-items: center;
+
 }
 
 header { 
     display: flex;
     height: 64px;
     justify-content: space-between;
-    align-items: center;
 }
 
 .menu-taps {
