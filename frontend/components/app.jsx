@@ -11,14 +11,18 @@ const App = () => (
         <Link to = '/' className = 'header-link'>
             <h1 className = 'home-greeting'> This is Space-time! </h1>
         </Link>
-        <GreetingContainer />
       </header>
-        <p className = 'menu-taps'>Home</p>
-        <p className = 'menu-taps'>Shows</p>
-        <p className = 'menu-taps'>Video</p>
-        <p className = 'menu-taps'>TV Schedules</p>
-        <p className = 'menu-taps'>Shop</p>
-        <p className = 'menu-taps'>Donate</p>
+        <GreetingContainer />
+        <nav>
+            <ul>
+                <li className = 'menu-taps'>Home</li>
+                <li className = 'menu-taps'>Shows</li>
+                <li className = 'menu-taps'>Video</li>
+                <li className = 'menu-taps'>TV Schedules</li>
+                <li className = 'menu-taps'>Shop</li>
+                <li className = 'menu-taps'>Donate</li>
+            </ul>
+        </nav>
     <Switch>
         <AuthRoute exact path="/login" component={LogInFormContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
