@@ -11,6 +11,6 @@ User.delete_all
 demo = User.create!(
     first_name: 'james', 
     last_name: 'maxwell', 
-    username: 'maxwelltStressTensor@spaceMail.com' 
+    username: 'maxwelltStressTensor@spaceMail.com', 
     password: 'epsilon'
 )
