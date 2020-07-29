@@ -1,0 +1,20 @@
+.main-menu {
+    background-color: rgb(24, 36, 126);
+}
+
+header { 
+    display: flex;
+    height: 64px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-taps {
+    display: inline-block;
+    align-items: center;
+    font-size: 14px;
+    position: relative;
+    color: cornsilk;
+    width: 080px;
+    vertical-align: text-top;
+}
