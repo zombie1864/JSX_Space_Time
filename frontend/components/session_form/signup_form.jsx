@@ -13,32 +13,39 @@ export class Signup extends React.Component {
         }
         this.submit = this.submit.bind(this); 
     }
-
+    
     update(field) {
         return e => this.setState({
             [field] : e.currentTarget.value
         })
     }
-
+    
     submit(e) {
         e.preventDefault(); 
         const user = Object.assign({}, this.state); 
         this.props.processForm(user)
     }
-
+    
     renderErrors() {
-        // i don't think i need errors.map( (error), i )
         return (
-            <ul> 
-                { Object.values(this.props.errors) }
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
             </ul>
-        )
+        );
+    }
+    componentWillUnmount() {
+        this.props.clearErrors()
     }
     
     render() {
         return (
-            <div>
+            <div className = 'sign-up'>
                 <form onSubmit = {this.submit}>
+                    <div>{ this.renderErrors() }</div>
                     <br/>
                     <input type="text"
                             value = {this.state.first_name}

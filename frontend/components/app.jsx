@@ -6,10 +6,10 @@ import LogInFormContainer from './session_form/login_form_container';
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 
 const App = () => (
-  <div>
+  <div className = 'main-menu'>
       <header>
         <Link to = '/' className = 'header-link'>
-            <h1> This is Space-time! </h1>
+            <h1 className = 'home-greeting'> This is Space-time! </h1>
         </Link>
         <GreetingContainer />
       </header>
