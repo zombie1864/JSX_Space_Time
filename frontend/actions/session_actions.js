@@ -39,7 +39,3 @@ export const logout = () => dispatch => (
     dispatch(logoutCurrentUser())
   ))
 );
-
-export const demoUser = () => dispatch => (
-    APIUtil.demoUser().then((user) => dispatch(receiveCurrentUser(user)))
-)

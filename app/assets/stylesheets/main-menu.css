@@ -1,3 +1,7 @@
+div {
+    display: block;
+}
+
 .main-menu {
     background-color: rgb(24, 36, 126);
     align-items: center;
@@ -20,9 +24,10 @@ nav ul li {
     display: inline-block;
     align-items: center;
     text-align: right;
-    font-size: 14px;
+    font-size: 18px;
     position: relative;
+    right: -0800px;
     color: cornsilk;
-    width: 080px;
+    width: 80px;
     vertical-align: text-top;
 }

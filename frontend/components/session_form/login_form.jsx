@@ -13,6 +13,7 @@ export class Login extends React.Component {
         }
 
         this.submit = this.submit.bind(this); 
+        this.demoUser = this.demoUser.bind(this)
     }
 
     update(field) {
@@ -25,6 +26,16 @@ export class Login extends React.Component {
         e.preventDefault(); 
         const user = Object.assign({}, this.state); 
         this.props.processForm(user); 
+    }
+
+    demoUser(e) {
+        e.preventDefault();
+        const userDemo = {
+            email: 'maxwell@spaceMail.com',
+            password: 'epsilon'
+        } 
+        this.props.processForm(userDemo); 
+
     }
 
     render() {
@@ -41,8 +52,12 @@ export class Login extends React.Component {
                             value = {this.state.password}
                             onChange = {this.update('password')}
                             placeholder = 'Password'/>
+                    <br/>
+                    <br/>
                     <input type="submit" value = {this.props.formType}/>
-                    <button onClick= { () => this.props.login()}></button>
+                    <br/>
+                    <br/>
+                    <button className = 'demo-sign' onClick = { this.demoUser }>Sign in as demoUser</button>
                 </form>
             </div>
         )

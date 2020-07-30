@@ -7,7 +7,6 @@ export class Signup extends React.Component {
         this.state = {
              first_name: '', 
              last_name: '', 
-             username: '', 
              email: '', 
              password: ''
         }
@@ -37,9 +36,10 @@ export class Signup extends React.Component {
             </ul>
         );
     }
-    componentWillUnmount() {
-        this.props.clearErrors()
-    }
+    // componentWillUnmount() {
+    //     debugger
+    //     this.props.clearErrors() <- add this to mdp 
+    // }
     
     render() {
         return (
@@ -57,10 +57,7 @@ export class Signup extends React.Component {
                             placeholder='Last Name'
                             onChange ={this.update('last_name')}/>
                             <br/><br/>
-                    <input type="text"
-                            value = {this.state.username}
-                            placeholder='username'
-                            onChange ={this.update('username')}/>
+
                             <br/><br/>
                     <input type="text"
                             value = {this.state.email}
