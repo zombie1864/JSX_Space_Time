@@ -5581,3 +5581,1113 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 116ms (Views: 103.3ms | ActiveRecord: 7.3ms)
 
 
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2805235997086680465)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateVideos (20200730212706)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (87.6ms)[0m  [1m[35mCREATE TABLE "videos" ("id" bigserial primary key, "title" character varying NOT NULL, "runtime" integer NOT NULL, "description" text NOT NULL, "video_url" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20200730212706_create_videos.rb:3
+  [1m[35m (19.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_videos_on_title" ON "videos"  ("title")[0m
+  ↳ db/migrate/20200730212706_create_videos.rb:10
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_videos_on_video_url" ON "videos"  ("video_url")[0m
+  ↳ db/migrate/20200730212706_create_videos.rb:11
+  [1m[36mActiveRecord::SchemaMigration Create (3.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200730212706"]]
+  ↳ bin/rails:9
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (18.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2805235997086680465)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mVideo Load (7.9ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  [1m[35m (14.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (32.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mVideo Destroy (0.7ms)[0m  [1m[31mDELETE FROM "videos"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "maxwell@spaceMail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "-wVX2mbxYRowDU4wRkINTw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$B4EKPLKcnXngmqJTmaQVies75MBIReJXabFiynS9t7thhGVLcDHXy"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (23.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "james"], ["last_name", "maxwell"], ["email", "maxwell@spaceMail.com"], ["password_digest", "$2a$12$B4EKPLKcnXngmqJTmaQVies75MBIReJXabFiynS9t7thhGVLcDHXy"], ["session_token", "-wVX2mbxYRowDU4wRkINTw"], ["created_at", "2020-07-31 15:04:36.079822"], ["updated_at", "2020-07-31 15:04:36.079822"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mVideo Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."title" = $1 LIMIT $2[0m  [["title", "Space-time"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mVideo Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."video_url" = $1 LIMIT $2[0m  [["video_url", "qxcjolk123"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mVideo Create (0.9ms)[0m  [1m[32mINSERT INTO "videos" ("title", "runtime", "description", "video_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Space-time"], ["runtime", 12], ["description", "look at the moon"], ["video_url", "qxcjolk123"], ["created_at", "2020-07-31 15:04:36.122018"], ["updated_at", "2020-07-31 15:04:36.122018"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[36mVideo Load (0.6ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+Started GET "/api/video" for ::1 at 2020-07-31 11:05:27 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Jeff_Klinsmann/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::VideosController#show as JSON
+  Parameters: {"first_category"=>{"first_key"=>"a value", "second_key"=>"another value ", "third_key"=>{"key"=>"value"}}, "second_category"=>"value"}
+Completed 404 Not Found in 21122ms (ActiveRecord: 6.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:12:in `show'
+
+Started GET "/api/video" for ::1 at 2020-07-31 11:06:24 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"first_category"=>{"first_key"=>"a value", "second_key"=>"another value ", "third_key"=>{"key"=>"value"}}, "second_category"=>"value"}
+  Rendering api/videos/show.json.jbuilder
+  Rendered api/videos/_video.json.jbuilder (11.2ms)
+  Rendered api/videos/show.json.jbuilder (32.8ms)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - undefined method `title' for nil:NilClass:
+  app/views/api/videos/_video.json.jbuilder:1:in `view template'
+  app/views/api/videos/show.json.jbuilder:1:in `_app_views_api_videos_show_json_jbuilder__3967334195286542725_70292896706080'
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/video" for ::1 at 2020-07-31 11:08:42 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"first_category"=>{"first_key"=>"a value", "second_key"=>"another value ", "third_key"=>{"key"=>"value"}}, "second_category"=>"value"}
+Completed 404 Not Found in 19ms (ActiveRecord: 13.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:12:in `show'
+
+Started GET "/api/video" for ::1 at 2020-07-31 11:08:56 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"first_category"=>{"first_key"=>"a value", "second_key"=>"another value ", "third_key"=>{"key"=>"value"}}, "second_category"=>"value"}
+Completed 404 Not Found in 68ms (ActiveRecord: 64.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:12:in `show'
+
+Started GET "/api/video" for ::1 at 2020-07-31 11:12:38 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"first_category"=>{"first_key"=>"a value", "second_key"=>"another value ", "third_key"=>{"key"=>"value"}}, "second_category"=>"value"}
+Completed 404 Not Found in 28ms (ActiveRecord: 21.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:12:in `show'
+
+Started GET "/api/video/Space-time" for ::1 at 2020-07-31 11:14:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/video/Space-time"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/video/Space-time" for ::1 at 2020-07-31 11:15:30 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/video/Space-time"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/video" for ::1 at 2020-07-31 11:15:38 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"first_category"=>{"first_key"=>"a value", "second_key"=>"another value ", "third_key"=>{"key"=>"value"}}, "second_category"=>"value"}
+Completed 404 Not Found in 17ms (ActiveRecord: 12.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:12:in `show'
+
+Started GET "/api/Space-time" for ::1 at 2020-07-31 11:15:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/Space-time"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/Video" for ::1 at 2020-07-31 11:16:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/Video"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/video" for ::1 at 2020-07-31 11:16:22 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"first_category"=>{"first_key"=>"a value", "second_key"=>"another value ", "third_key"=>{"key"=>"value"}}, "second_category"=>"value"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:12:in `show'
+
+Started GET "/api/video" for ::1 at 2020-07-31 11:16:54 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"first_category"=>{"first_key"=>"a value", "second_key"=>"another value ", "third_key"=>{"key"=>"value"}}, "second_category"=>"value"}
+Completed 404 Not Found in 17ms (ActiveRecord: 9.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:12:in `show'
+
+Started GET "/api/video" for ::1 at 2020-07-31 11:17:12 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"first_category"=>{"first_key"=>"a value", "second_key"=>"another value ", "third_key"=>{"key"=>"value"}}, "second_category"=>"value"}
+Completed 404 Not Found in 13ms (ActiveRecord: 9.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/video" for ::1 at 2020-07-31 11:17:23 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"first_category"=>{"first_key"=>"a value", "second_key"=>"another value ", "third_key"=>{"key"=>"value"}}, "second_category"=>"value"}
+  Rendering api/videos/show.json.jbuilder
+  Rendered api/videos/_video.json.jbuilder (3.9ms)
+  Rendered api/videos/show.json.jbuilder (5.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - undefined method `title' for nil:NilClass:
+  app/views/api/videos/_video.json.jbuilder:1:in `view template'
+  app/views/api/videos/show.json.jbuilder:1:in `_app_views_api_videos_show_json_jbuilder__3967334195286542725_70292910406340'
+  app/controllers/api/videos_controller.rb:12:in `show'
+
+Started GET "/api/video" for ::1 at 2020-07-31 11:24:07 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"first_category"=>{"first_key"=>"a value", "second_key"=>"another value ", "third_key"=>{"key"=>"value"}}, "second_category"=>"value"}
+Completed 404 Not Found in 14ms (ActiveRecord: 9.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/video" for ::1 at 2020-07-31 13:36:10 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"first_category"=>{"first_key"=>"a value", "second_key"=>"another value ", "third_key"=>{"key"=>"value"}}, "second_category"=>"value"}
+Completed 404 Not Found in 14ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/" for ::1 at 2020-07-31 13:41:40 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (19.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (85.8ms)
+Completed 200 OK in 1670ms (Views: 1608.6ms | ActiveRecord: 52.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:41:45 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/video" for ::1 at 2020-07-31 13:47:45 -0400
+Processing by Api::VideosController#show as JSON
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/session" for ::1 at 2020-07-31 13:48:19 -0400
+
+AbstractController::ActionNotFound - The action 'show' could not be found for Api::SessionsController:
+
+Started POST "/api/session" for ::1 at 2020-07-31 13:48:29 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"maxwell@spaceMail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (18.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "maxwell@spaceMail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:20
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "maxwell@spaceMail.com"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "jU5IAZULfkf_vRtL3UEN0w"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["password_digest", "$2a$12$B4EKPLKcnXngmqJTmaQVies75MBIReJXabFiynS9t7thhGVLcDHXy"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[36mUser Update (12.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "jU5IAZULfkf_vRtL3UEN0w"], ["updated_at", "2020-07-31 17:48:29.637861"], ["id", 6]]
+  ↳ app/models/user.rb:20
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:20
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.1ms)
+Completed 200 OK in 318ms (Views: 8.9ms | ActiveRecord: 51.7ms)
+
+
+Started GET "/api/session" for ::1 at 2020-07-31 13:48:38 -0400
+
+AbstractController::ActionNotFound - The action 'show' could not be found for Api::SessionsController:
+
+Started POST "/api/user" for ::1 at 2020-07-31 13:51:21 -0400
+Processing by Api::UsersController#create as JSON
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:16:in `user_params'
+  app/controllers/api/users_controller.rb:3:in `create'
+
+Started POST "/api/user" for ::1 at 2020-07-31 13:53:00 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"first_name"=>"johnny", "last_name"=>"cage", "email"=>"mk11@nrs.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:16:in `user_params'
+  app/controllers/api/users_controller.rb:3:in `create'
+
+Started POST "/api/session" for ::1 at 2020-07-31 13:53:48 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"first_name"=>"johnny", "last_name"=>"cage", "email"=>"mk11@nrs.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:7:in `create'
+
+Started POST "/api/session" for ::1 at 2020-07-31 13:54:50 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"first_name"=>"johnny", "last_name"=>"cage", "email"=>"mk11@nrs.com", "password"=>"[FILTERED]"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/controllers/api/sessions_controller.rb:7:in `create'
+
+Started POST "/api/user" for ::1 at 2020-07-31 13:55:04 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"first_name"=>"johnny", "last_name"=>"cage", "email"=>"mk11@nrs.com", "password"=>"[FILTERED]"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/api/users_controller.rb:16:in `user_params'
+  app/controllers/api/users_controller.rb:3:in `create'
+
+Started POST "/api/user" for ::1 at 2020-07-31 13:55:44 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"johnny", "last_name"=>"cage", "email"=>"mk11@nrs.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mk11@nrs.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "bwY9UkM6OjrmJoWokoL2Ew"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$0Fr5FXYpxlKLo4.25bLaJOfJ.Uhd1IMkeskluLYfWtgn.TZD5QU86"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[36mUser Create (14.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "johnny"], ["last_name", "cage"], ["email", "mk11@nrs.com"], ["password_digest", "$2a$12$0Fr5FXYpxlKLo4.25bLaJOfJ.Uhd1IMkeskluLYfWtgn.TZD5QU86"], ["session_token", "bwY9UkM6OjrmJoWokoL2Ew"], ["created_at", "2020-07-31 17:55:44.350703"], ["updated_at", "2020-07-31 17:55:44.350703"]]
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:20
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "mk11@nrs.com"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "JmWs77LtDVnjXINYbRv2AA"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["password_digest", "$2a$12$0Fr5FXYpxlKLo4.25bLaJOfJ.Uhd1IMkeskluLYfWtgn.TZD5QU86"], ["id", 7], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "JmWs77LtDVnjXINYbRv2AA"], ["updated_at", "2020-07-31 17:55:44.376031"], ["id", 7]]
+  ↳ app/models/user.rb:20
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:20
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.6ms)
+Completed 200 OK in 277ms (Views: 8.1ms | ActiveRecord: 29.2ms)
+
+
+Started GET "/api/video" for ::1 at 2020-07-31 13:59:29 -0400
+Processing by Api::VideosController#show as JSON
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/video?video=Space-time" for ::1 at 2020-07-31 14:07:21 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"video"=>"Space-time"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/video?title=Space-time" for ::1 at 2020-07-31 14:35:10 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"title"=>"Space-time"}
+  [1m[36mVideo Load (5.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+Completed 404 Not Found in 40ms (ActiveRecord: 30.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video with 'id'=Space-time:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/video?title=Space-time" for ::1 at 2020-07-31 14:35:55 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"title"=>"Space-time"}
+  [1m[36mVideo Load (2.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+Completed 404 Not Found in 4ms (ActiveRecord: 2.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video with 'id'=Space-time:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/video?title=Space-time" for ::1 at 2020-07-31 14:37:12 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"title"=>"Space-time"}
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video with 'id'=Space-time:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/video?title=Space-time" for ::1 at 2020-07-31 14:38:51 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"title"=>"Space-time"}
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+Completed 404 Not Found in 13ms (ActiveRecord: 6.4ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video with 'id'=Space-time:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/" for ::1 at 2020-07-31 14:38:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JmWs77LtDVnjXINYbRv2AA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 64ms (Views: 56.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/video?title=Space-time" for ::1 at 2020-07-31 14:39:07 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"title"=>"Space-time"}
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video with 'id'=Space-time:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/video?title=Space-time" for ::1 at 2020-07-31 14:39:26 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"title"=>"Space-time"}
+  [1m[36mVideo Load (0.2ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+Completed 404 Not Found in 10ms (ActiveRecord: 4.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video with 'id'=Space-time:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/" for ::1 at 2020-07-31 14:49:23 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JmWs77LtDVnjXINYbRv2AA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (49.4ms)
+Completed 200 OK in 115ms (Views: 99.9ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/api/video?title=Space-time" for ::1 at 2020-07-31 14:49:30 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"title"=>"Space-time"}
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+Completed 404 Not Found in 4ms (ActiveRecord: 0.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video with 'id'=Space-time:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/video?title=Space-time" for ::1 at 2020-07-31 14:50:56 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"title"=>"Space-time"}
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+Completed 404 Not Found in 14ms (ActiveRecord: 5.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video with 'id'=Space-time:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/video?title=Space-time" for ::1 at 2020-07-31 14:51:05 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"title"=>"Space-time"}
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+Completed 404 Not Found in 11ms (ActiveRecord: 6.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video with 'id'=Space-time:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/" for ::1 at 2020-07-31 15:00:57 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JmWs77LtDVnjXINYbRv2AA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 71ms (Views: 59.9ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/api/video?title=Space-time" for ::1 at 2020-07-31 15:01:00 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"title"=>"Space-time"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+Completed 404 Not Found in 12ms (ActiveRecord: 4.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video with 'id'=Space-time:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/" for ::1 at 2020-07-31 15:05:03 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JmWs77LtDVnjXINYbRv2AA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 76ms (Views: 72.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/video?title=Space-time" for ::1 at 2020-07-31 15:05:06 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"title"=>"Space-time"}
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+Completed 404 Not Found in 2ms (ActiveRecord: 0.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video with 'id'=Space-time:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/video" for ::1 at 2020-07-31 15:06:22 -0400
+Processing by Api::VideosController#show as JSON
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+  [1m[35m (18.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mVideo Destroy (24.9ms)[0m  [1m[31mDELETE FROM "videos"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mVideo Exists (12.4ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."title" = $1 LIMIT $2[0m  [["title", "Space-time"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mVideo Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."video_url" = $1 LIMIT $2[0m  [["video_url", "qxcjolk123"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mVideo Create (12.0ms)[0m  [1m[32mINSERT INTO "videos" ("title", "runtime", "description", "video_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Space-time"], ["runtime", 12], ["description", "look at the moon"], ["video_url", "qxcjolk123"], ["created_at", "2020-07-31 19:10:11.501710"], ["updated_at", "2020-07-31 19:10:11.501710"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+Started GET "/" for ::1 at 2020-07-31 15:10:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JmWs77LtDVnjXINYbRv2AA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/video" for ::1 at 2020-07-31 15:10:23 -0400
+Processing by Api::VideosController#show as JSON
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (28.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mVideo Destroy (12.3ms)[0m  [1m[31mDELETE FROM "videos"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (23.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "maxwell@spaceMail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qFM0wpSJ2TGdLTJZ8tTsYA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$GFHNVf0nzViKpkJS53x87OGD.z2b6BAJG.WPFDRo5iJrAuEwjfe5S"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (6.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "james"], ["last_name", "maxwell"], ["email", "maxwell@spaceMail.com"], ["password_digest", "$2a$12$GFHNVf0nzViKpkJS53x87OGD.z2b6BAJG.WPFDRo5iJrAuEwjfe5S"], ["session_token", "qFM0wpSJ2TGdLTJZ8tTsYA"], ["created_at", "2020-07-31 19:10:48.757256"], ["updated_at", "2020-07-31 19:10:48.757256"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mVideo Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."title" = $1 LIMIT $2[0m  [["title", "Space-time"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mVideo Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."video_url" = $1 LIMIT $2[0m  [["video_url", "qxcjolk123"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mVideo Create (0.3ms)[0m  [1m[32mINSERT INTO "videos" ("title", "runtime", "description", "video_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Space-time"], ["runtime", 12], ["description", "look at the moon"], ["video_url", "qxcjolk123"], ["created_at", "2020-07-31 19:10:48.782916"], ["updated_at", "2020-07-31 19:10:48.782916"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+Started GET "/api/session" for ::1 at 2020-07-31 15:14:53 -0400
+
+AbstractController::ActionNotFound - The action 'show' could not be found for Api::SessionsController:
+
+Started GET "/api/session" for ::1 at 2020-07-31 15:15:04 -0400
+
+AbstractController::ActionNotFound - The action 'show' could not be found for Api::SessionsController:
+
+Started DELETE "/api/session" for ::1 at 2020-07-31 15:15:15 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JmWs77LtDVnjXINYbRv2AA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+Completed 404 Not Found in 13ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-07-31 15:15:16 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JmWs77LtDVnjXINYbRv2AA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-07-31 15:15:17 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JmWs77LtDVnjXINYbRv2AA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 15:15:23 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "JmWs77LtDVnjXINYbRv2AA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 62ms (Views: 58.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-31 15:15:30 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"maxwell@spaceMail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "maxwell@spaceMail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:20
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "maxwell@spaceMail.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "7hMyK764l4qDrH54d-PQJA"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["password_digest", "$2a$12$GFHNVf0nzViKpkJS53x87OGD.z2b6BAJG.WPFDRo5iJrAuEwjfe5S"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[36mUser Update (6.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "7hMyK764l4qDrH54d-PQJA"], ["updated_at", "2020-07-31 19:15:30.854531"], ["id", 8]]
+  ↳ app/models/user.rb:20
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:20
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.0ms)
+Completed 200 OK in 305ms (Views: 9.3ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/api/session?user%5Bfirst_name%5D=james&user%5Blast_name%5D=maxwell&user%5Bemail%5D=maxwell%40spaceMail.com&user%5Bpassword%5D=[FILTERED]" for ::1 at 2020-07-31 15:16:08 -0400
+
+AbstractController::ActionNotFound - The action 'show' could not be found for Api::SessionsController:
+
+Started GET "/api/session?user%5Bfirst_name%5D=james&user%5Blast_name%5D=maxwell&user%5Bemail%5D=maxwell%40spaceMail.com&user%5Bpassword%5D=[FILTERED]" for ::1 at 2020-07-31 15:16:43 -0400
+
+AbstractController::ActionNotFound - The action 'show' could not be found for Api::SessionsController:
+
+Started DELETE "/api/session" for ::1 at 2020-07-31 15:16:46 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "7hMyK764l4qDrH54d-PQJA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:20
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "maxwell@spaceMail.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "030Lb2UE_B45sjrPyCuZXA"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["password_digest", "$2a$12$GFHNVf0nzViKpkJS53x87OGD.z2b6BAJG.WPFDRo5iJrAuEwjfe5S"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "030Lb2UE_B45sjrPyCuZXA"], ["updated_at", "2020-07-31 19:16:46.484478"], ["id", 8]]
+  ↳ app/models/user.rb:20
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:20
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.5ms)
+Completed 200 OK in 24ms (Views: 7.4ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/api/session?user%5Bfirst_name%5D=james&user%5Blast_name%5D=maxwell&user%5Bemail%5D=maxwell%40spaceMail.com&user%5Bpassword%5D=[FILTERED]" for ::1 at 2020-07-31 15:16:52 -0400
+
+AbstractController::ActionNotFound - The action 'show' could not be found for Api::SessionsController:
+
+Started GET "/api/user?user%5Bfirst_name%5D=james&user%5Blast_name%5D=maxwell&user%5Bemail%5D=maxwell%40spaceMail.com&user%5Bpassword%5D=[FILTERED]" for ::1 at 2020-07-31 15:17:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/user"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/users/user?user%5Bfirst_name%5D=james&user%5Blast_name%5D=maxwell&user%5Bemail%5D=maxwell%40spaceMail.com&user%5Bpassword%5D=[FILTERED]" for ::1 at 2020-07-31 15:17:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/user"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-31 15:57:14 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 122ms (Views: 95.7ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/api/video" for ::1 at 2020-07-31 15:57:29 -0400
+Processing by Api::VideosController#show as JSON
+Completed 404 Not Found in 26ms (ActiveRecord: 7.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/video?title=Space-time" for ::1 at 2020-07-31 15:57:45 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"title"=>"Space-time"}
+  [1m[36mVideo Load (0.8ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+Completed 404 Not Found in 11ms (ActiveRecord: 0.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video with 'id'=Space-time:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/video?title=Space-time" for ::1 at 2020-07-31 16:13:52 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"title"=>"Space-time"}
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+Completed 404 Not Found in 27ms (ActiveRecord: 16.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video with 'id'=Space-time:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/video?title=Space-time" for ::1 at 2020-07-31 16:36:31 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"title"=>"Space-time"}
+  [1m[36mVideo Load (6.4ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+Completed 404 Not Found in 25ms (ActiveRecord: 6.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video with 'id'=Space-time:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/" for ::1 at 2020-07-31 16:36:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 100ms (Views: 91.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/video?title=Space-time" for ::1 at 2020-07-31 16:36:38 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"title"=>"Space-time"}
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video with 'id'=Space-time:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+Started GET "/api/video" for ::1 at 2020-07-31 17:18:09 -0400
+Processing by Api::VideosController#show as JSON
+Completed 404 Not Found in 85ms (ActiveRecord: 62.1ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Video without an ID:
+  app/controllers/api/videos_controller.rb:11:in `show'
+
+  [1m[36mVideo Load (8.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+Started GET "/api/videos/3" for ::1 at 2020-07-31 17:22:38 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mVideo Load (0.8ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+  Rendering api/videos/show.json.jbuilder
+  Rendered api/videos/show.json.jbuilder (20.0ms)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 40.0ms)
+
+
+
+ActionView::Template::Error - Missing partial api/video/_title with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:jbuilder]}. Searched in:
+  * "/Users/Jeff_Klinsmann/Desktop/Full_Stack_Project/app/views"
+:
+  app/views/api/videos/show.json.jbuilder:1:in `view template'
+
+Started GET "/" for ::1 at 2020-07-31 17:25:01 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (73.2ms)
+Completed 200 OK in 293ms (Views: 240.2ms | ActiveRecord: 45.7ms)
+
+
+Started GET "/api/videos/3" for ::1 at 2020-07-31 17:25:05 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:11
+  Rendering api/videos/show.json.jbuilder
+  Rendered api/videos/_video.json.jbuilder (6.7ms)
+  Rendered api/videos/show.json.jbuilder (9.1ms)
+Completed 200 OK in 109ms (Views: 16.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-07-31 17:25:44 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  Rendered api/videos/index.json.jbuilder (11.3ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::Template::Error - undefined method `each' for nil:NilClass:
+  app/views/api/videos/index.json.jbuilder:1:in `view template'
+
+Started GET "/api/videos" for ::1 at 2020-07-31 17:27:24 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (28.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/index.json.jbuilder (79.4ms)
+Completed 200 OK in 100ms (Views: 36.1ms | ActiveRecord: 54.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 17:45:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (42.1ms)
+Completed 200 OK in 1026ms (Views: 1003.8ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 17:45:53 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (50.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 1374ms (Views: 1320.2ms | ActiveRecord: 50.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 17:46:52 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 1405ms (Views: 1396.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 17:49:46 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 996ms (Views: 983.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 17:51:59 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (26.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 1098ms (Views: 1058.2ms | ActiveRecord: 26.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 17:57:23 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (58.2ms)
+Completed 200 OK in 1275ms (Views: 1266.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 18:01:15 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (42.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (75.0ms)
+Completed 200 OK in 1128ms (Views: 1073.8ms | ActiveRecord: 42.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 18:01:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-31 18:01:59 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"maxwell@spaceMail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (16.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "maxwell@spaceMail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:20
+  [1m[36mUser Exists (6.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "maxwell@spaceMail.com"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "ycfQYFnidNi0YQL5BVndsA"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[36mUser Exists (11.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["password_digest", "$2a$12$GFHNVf0nzViKpkJS53x87OGD.z2b6BAJG.WPFDRo5iJrAuEwjfe5S"], ["id", 8], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[36mUser Update (23.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "ycfQYFnidNi0YQL5BVndsA"], ["updated_at", "2020-07-31 22:01:59.889756"], ["id", 8]]
+  ↳ app/models/user.rb:20
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:20
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (2.8ms)
+Completed 200 OK in 589ms (Views: 11.2ms | ActiveRecord: 189.5ms)
+
+

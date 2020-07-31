@@ -5,6 +5,8 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 import { render } from "react-dom";
+import ShowVideoContainer from './videos/show_video_container'
+import IndexVideoContainer from './videos/video_index_container'
 
 const App = () => (
   <div className = 'main-menu'>
@@ -27,6 +29,8 @@ const App = () => (
     <Switch>
         <AuthRoute exact path="/login" component={LogInFormContainer} />
         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+        < Route path = '/show/:id' component={ShowVideoContainer}/>
+        < Route exact path = '/' component={IndexVideoContainer}/>
     </Switch>
   </div>
 );

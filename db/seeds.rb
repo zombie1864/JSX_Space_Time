@@ -6,11 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 User.delete_all 
+Video.delete_all
 
 demo = User.create!(
     first_name: 'james', 
     last_name: 'maxwell', 
     email: 'maxwell@spaceMail.com', 
     password: 'epsilon'
+)
+
+video1 = Video.create!(
+    title: 'Space-time', 
+    runtime: 12,
+    description: 'look at the moon', 
+    video_url: 'qxcjolk123'
 )
