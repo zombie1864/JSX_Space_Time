@@ -1,6 +1,6 @@
 @videos.each do |video| 
     json.set! video.id do 
-        json.extract! video, :title, :runtime, :description, :video_url 
+        json.partial! 'api/videos/video', video: video 
     end
 end  
     

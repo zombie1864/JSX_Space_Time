@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   root "static_pages#root"
 end
 
-# use plurals 
+# use plurals session is the only exemption 
+# resources not resource, videos not video 

@@ -1,5 +1,10 @@
-.home-greeting {
-    color: cornsilk;
-    font-size: 35px;
-    font-family: Helvetica;
-}
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+  }
+   
+  .react-player {
+    position: absolute;
+    top: 10;
+    left: 10;
+  }

@@ -1,14 +1,14 @@
 export const fetchAllVideos = () => (
     $.ajax({
         method: 'GET', 
-        url: '/api/video'
+        url: '/api/videos'
     })
 );
 
 export const fetchVideo = id => (
     $.ajax({
         method: 'GET', 
-        url: `/api/video/${id}`
+        url: `/api/videos/${id}`
     })
 );
 
