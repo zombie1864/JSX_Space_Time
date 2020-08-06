@@ -12,12 +12,8 @@ function Modal({modal, closeModal}) {
   let component;
   switch (modal) {
     case 'auth':
-        // debugger
       component = <AuthModal />;
       break;
-    // case 'signup':
-    //   component = <SignupFormContainer />;
-    //   break;
     default:
       return null;
   }

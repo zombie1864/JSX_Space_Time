@@ -1,4 +1,6 @@
 import React from 'react'; 
+import { Link } from 'react-router-dom';
+import GreetingContainer from '../greeting/greeting_container'
 
 export class Signup extends React.Component {
     constructor(props) {
@@ -43,7 +45,31 @@ export class Signup extends React.Component {
     
     render() {
         return (
+
             <div className = 'sign-up'>
+                                <div className = 'main-menu'>
+                <header>
+                <Link to = '/' className = 'header-link'>
+                    <h1>
+                        <img className = 'home-icon' src={window.Home_icon} alt="HOME"/>
+                    </h1>
+                </Link>
+                </header> 
+                <div className = 'signin-button'>
+                <GreetingContainer />
+                </div>
+                <nav >
+                    <ul>
+                        <li className = 'menu-taps'>Home</li>
+                        <li className = 'menu-taps'>Shows</li>
+                        <li className = 'menu-taps'>Video</li>
+                        <li className = 'menu-taps'>TV Schedules</li>
+                        <li className = 'menu-taps'>Shop</li>
+                        <li className = 'menu-taps'>Donate</li>
+                    </ul>
+                </nav>
+                </div>
+
                 <form onSubmit = {this.submit}>
                     <div>{ this.renderErrors() }</div>
                     <br/>

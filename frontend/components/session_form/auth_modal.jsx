@@ -5,9 +5,9 @@ import { closeModal } from '../../actions/modal_actions'
 
 const AuthModal = props => {
     const sessionLinks = () => (
-        <nav className="signin-signup">
+        <nav className="modal-container">
             <button className = 'signin_button'>
-                <Link to="/login" className="signin" onClick = {props.closeModal} >Sign In</Link>            
+                <Link to="/login" className="signin" onClick = {props.closeModal} >Sign-In</Link>            
             </button>
                 <Link to="/signup" onClick = {props.closeModal}className="signup">Sign up </Link>
         </nav>

@@ -9,11 +9,10 @@ class VideoIndex extends React.Component {
 
     render() {
         const allVideos = this.props.videos.map(video => {
-            // debugger 
             return (
             <li key = { video.id } className = 'indexed-video'>
                 <Link to = {`/api/videos/${video.id}`}>
-                <img src='https://image.pbs.org/video-assets/pbs/pbs-space-time/189190/images/mezzanine_849.jpg?crop=480x270' width = '300' height = '200'/>
+                <img src={video.image_url} width = '430' height = '220'/>
                 </Link>
             </li>
             )

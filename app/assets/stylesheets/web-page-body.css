@@ -1,6 +1,9 @@
 body {
     background-color: #131516;
-    background-image: url('PBS-webpage-img.jpg');
+    /* background-image: url('PBS-webpage-img.jpg');
     background-repeat: no-repeat;
-    background-size: 068%
+    background-size: 078%;
+    background-position-x: center;
+    background-position-y: 70px; */
+    
 }

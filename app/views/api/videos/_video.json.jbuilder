@@ -1,1 +1,1 @@
-json.extract! video, :id, :title, :runtime, :description, :video_url 
+json.extract! video, :id, :title, :runtime, :description, :video_url, :image_url

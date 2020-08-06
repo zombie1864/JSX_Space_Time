@@ -1,14 +1,9 @@
 .index-videos {
     width: 100%;
-    display: block;
-    margin-top: auto;
-    margin: 0;
-    padding: 20px;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    list-style-type: none;
+    position: absolute;
+    top: 450px;
+    left: 0;
+    padding-left: 220px;
 }
 
 .indexed-video {
