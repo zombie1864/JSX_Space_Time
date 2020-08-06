@@ -1,3 +1,43 @@
 .modal-container {
-    background-color: red;
+    background-color: rgb(34, 34, 34);
+    width: 500px;
+    height: 680px;
+    border: solid 2px rgb(4, 116, 245);
+    border-radius: 5px;
+
+}
+/* signin_button comes from the greeting.jsx*/
+.signin_button { 
+    width: 80px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 30px;
+    border: solid 2px black;
+    background-color: rgb(24, 36, 126);
+    font-size: 13px;
+    color: whitesmoke;
+}
+
+.signin{
+    font-size: 22px;
+    color: whitesmoke; 
+    position: relative;
+    left: 55px; 
+    top: 100px;
+    background-color: rgb(24, 36, 126);
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    /* border: solid 2px black; */
+
+}
+
+.signup {
+    color: rgb(89, 131, 194);
+    font-size: 18px;
+    position: relative;
+    left: 105px; 
+    top: 120px;
+
 }

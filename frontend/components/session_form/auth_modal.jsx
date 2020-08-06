@@ -6,10 +6,13 @@ import { closeModal } from '../../actions/modal_actions'
 const AuthModal = props => {
     const sessionLinks = () => (
         <nav className="modal-container">
-            <button className = 'signin_button'>
-                <Link to="/login" className="signin" onClick = {props.closeModal} >Sign-In</Link>            
-            </button>
-                <Link to="/signup" onClick = {props.closeModal}className="signup">Sign up </Link>
+            <Link to="/login" className="signin" onClick = {props.closeModal} >Sign in with JSX Account</Link>            
+            <br/><br/>
+            <Link to="/signup" onClick = {props.closeModal}className="signup"> 
+                <p>
+                    Not registered yet? <strong> Create a JSX Account</strong> 
+                </p> 
+            </Link>
         </nav>
     );
 
