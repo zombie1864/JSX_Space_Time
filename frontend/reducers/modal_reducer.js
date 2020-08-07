@@ -1,4 +1,3 @@
-// THIS IS FROM MODALBNB - Can i just copy and paste?
 import { OPEN_MODAL, CLOSE_MODAL } from '../actions/modal_actions';
 
 export default function modalReducer(state = null, action) {
