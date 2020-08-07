@@ -36036,3 +36036,26 @@ puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
 Completed 200 OK in 418ms (Views: 323.0ms | ActiveRecord: 91.9ms)
 
 
+Started GET "/" for ::1 at 2020-08-07 08:08:45 -0400
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Jeff_Klinsmann/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (21.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (67.9ms)
+Completed 200 OK in 2069ms (Views: 2012.4ms | ActiveRecord: 53.0ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-08-07 08:08:50 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (57.9ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (628.4ms)
+Completed 200 OK in 641ms (Views: 21.0ms | ActiveRecord: 615.4ms)
+
+
