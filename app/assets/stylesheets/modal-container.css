@@ -16,6 +16,7 @@
     background-color: rgb(24, 36, 126);
     font-size: 13px;
     color: whitesmoke;
+    cursor: pointer;
 }
 
 .signin{

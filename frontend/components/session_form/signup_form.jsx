@@ -20,7 +20,7 @@ export class Signup extends React.Component {
             [field] : e.currentTarget.value
         })
     }
-    
+
     submit(e) {
         e.preventDefault(); 
         const user = Object.assign({}, this.state); 
@@ -38,10 +38,10 @@ export class Signup extends React.Component {
             </ul>
         );
     }
-    // componentWillUnmount() {
-    //     debugger
-    //     this.props.clearErrors() <- add this to mdp 
-    // }
+    componentWillUnmount() { //clears the error message for the next session 
+        // debugger
+        this.props.clearErrors() //<- add this to mdp 
+    }
     
     render() {
         return (
