@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_04_202747) do
+ActiveRecord::Schema.define(version: 2020_09_08_175736) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "donations", force: :cascade do |t|
+    t.string "monthly_amount", null: false
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "city", null: false
+    t.string "state", null: false
+    t.string "zip_code", null: false
+    t.string "email", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_donations_on_email", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name", null: false
