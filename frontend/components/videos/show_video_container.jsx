@@ -4,8 +4,8 @@ import { fetchVideo } from '../../actions/video_actions';
 
 const msp = ( state, ownProps ) => {
     // debugger
-    return { video : state.entities.videos[ ownProps.match.params.id ]
-}}; 
+    return { video : state.entities.videos[ ownProps.match.params.id ]}
+}; 
 
 const mdp = dispatch => ({
     fetchVideo: id => dispatch(fetchVideo(id))
