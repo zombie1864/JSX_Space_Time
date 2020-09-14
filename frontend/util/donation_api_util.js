@@ -1,7 +1,7 @@
 export const donationReq = () => (
     $.ajax({
         method: 'POST', 
-        url: '/api/donations',
+        url: '/api/donation',
         data: { donation }
     })
 ); 

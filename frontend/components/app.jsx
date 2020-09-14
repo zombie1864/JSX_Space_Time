@@ -19,7 +19,7 @@ const App = () => (
           <AuthRoute exact path="/signup" component={SignUpFormContainer} />
           < Route path = '/api/videos/:id' component={ShowVideoContainer}/>
           < Route path = '/' component = {HomePage}/>
-          < Route path = '/api/donations' component = {DonationContainer}/>
+          < Route path = '/api/donation' component = {DonationContainer}/>
       </Switch>
   </div>
 );
