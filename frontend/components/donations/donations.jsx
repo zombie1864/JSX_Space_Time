@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom'; 
 
-class Donations extends Component {
+export class Donations extends React.Component {
     render() {
         return (
             <div>
