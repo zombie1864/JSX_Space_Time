@@ -7,5 +7,5 @@ const receiveDonationReq = donation => ({
 })
 
 export const donationReq = () => dispatch => (
-    DonationAPIUtil.donationReq().then(donation => { dispatch(donationReq(donation))})
+    DonationAPIUtil.donationReq().then(donation => { dispatch(receiveDonationReq(donation))})
 ); 
