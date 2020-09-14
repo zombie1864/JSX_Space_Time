@@ -26,7 +26,9 @@ export class HomePage extends React.Component {
                         <li className = 'menu-taps'>Video</li>
                         <li className = 'menu-taps'>TV Schedules</li>
                         <li className = 'menu-taps'>Shop</li>
+                        <Link to = '/api/donations' className = 'donation_page'>
                         <li className = 'menu-taps'>Donate</li>
+                        </Link>
                     </ul>
                 </nav>
                 </div>

@@ -9,16 +9,18 @@ import ShowVideoContainer from './videos/show_video_container'
 import IndexVideoContainer from './videos/video_index_container'
 import Modal from './modal/modal';
 import HomePage from './home_page/home_page'
+import DonationContainer from './donations/donation_container'
+import donation_container from "./donations/donation_container";
 
 const App = () => (
   <div> 
       < Modal />
-      {/* <HomePage/> */}
       <Switch>
           <AuthRoute exact path="/login" component={LogInFormContainer} />
           <AuthRoute exact path="/signup" component={SignUpFormContainer} />
           < Route path = '/api/videos/:id' component={ShowVideoContainer}/>
           < Route path = '/' component = {HomePage}/>
+          < Route path = '/api/donations' component = {donation_container}/>
       </Switch>
   </div>
 );

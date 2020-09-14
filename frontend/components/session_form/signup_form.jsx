@@ -58,16 +58,6 @@ export class Signup extends React.Component {
                 <div className = 'signin-button'>
                 <GreetingContainer />
                 </div>
-                <nav >
-                    <ul>
-                        <li className = 'menu-taps'>Home</li>
-                        <li className = 'menu-taps'>Shows</li>
-                        <li className = 'menu-taps'>Video</li>
-                        <li className = 'menu-taps'>TV Schedules</li>
-                        <li className = 'menu-taps'>Shop</li>
-                        <li className = 'menu-taps'>Donate</li>
-                    </ul>
-                </nav>
                 </div>
 
                 <form onSubmit = {this.submit}>
