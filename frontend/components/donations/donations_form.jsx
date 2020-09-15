@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
-import { createDonation } from '../../util/donation_api_util';
+
 
 export class DonationsForm extends React.Component {
     constructor(props) {
@@ -37,15 +37,25 @@ export class DonationsForm extends React.Component {
         // const form = Object.assign({}, this.state); 
         // this.props.createDonation(form); 
         const donation = new FormData(); 
+        const { 
+            monthly_amount, 
+            first_name, 
+            last_name, 
+            city, 
+            state, 
+            zip_code, 
+            email 
+        } = this.state;
 
-        donation.append('donations[monthly_amount]', this.state.monthly_amount);
-        donation.append('donations[first_name]', this.state.first_name);
-        donation.append('donations[last_name]', this.state.last_name);
-        donation.append('donations[city]', this.state.city);
-        donation.append('donations[state]', this.state.state);
-        donation.append('donations[zip_code]', this.state.zip_code);
-        donation.append('donations[email]', this.state.email);
-        this.props.createDonation(donation); 
+        donation.append('donations[monthly_amount]', monthly_amount);
+        donation.append('donations[first_name]', first_name);
+        donation.append('donations[last_name]', last_name);
+        donation.append('donations[city]', city);
+        donation.append('donations[state]', state);
+        donation.append('donations[zip_code]', zip_code);
+        donation.append('donations[email]', email);
+        debugger
+        this.props.submitDonation(donation); 
     }
 
     render() {
@@ -65,25 +75,25 @@ export class DonationsForm extends React.Component {
                     <label>Monthly Amount</label>
                     <br/>
                     <input  type='text' 
-                            name='monthly amount' 
+                            name='monthly_amount' 
                             onChange={this.onChange} 
-                            // value={this.state.entities.donations.monthly_amount}
+                            value={this.state.monthly_amount}
                         />                  
                     <br/>
                     <label>First Name</label>
                     <br/>
                     <input  type='text' 
-                            name='first name' 
+                            name='first_name' 
                             onChange={this.onChange} 
-                            // value={this.state.entities.donations.first_name} 
+                            value={this.state.first_name} 
                         />                   
                     <br/>
                     <label>Last name</label>
                     <br/>
                     <input  type='text' 
-                            name='last name' 
+                            name='last_name' 
                             onChange={this.onChange} 
-                            // value={this.state.entities.donations.last_name} 
+                            value={this.state.last_name} 
                         />                    
                     <br/>
                     <label>City</label>
@@ -91,7 +101,7 @@ export class DonationsForm extends React.Component {
                     <input  type='text' 
                             name='city' 
                             onChange={this.onChange} 
-                            // value={this.state.entities.donations.city}
+                            value={this.state.city}
                         />                    
                     <br/>
                     <label>State</label>
@@ -99,15 +109,15 @@ export class DonationsForm extends React.Component {
                     <input  type='text' 
                             name='state' 
                             onChange={this.onChange} 
-                            // value={this.state.entities.donations.state}
+                            value={this.state.state}
                         />                    
                     <br/>
                     <label>Zip Code</label>
                     <br/>
                     <input  type='text' 
-                            name='zip Code' 
+                            name='zip_code' 
                             onChange={this.onChange} 
-                            // value={this.state.entities.donations.zip_code}
+                            value={this.state.zip_code}
                         />                    
                     <br/>
                     <label>Email</label>
@@ -115,7 +125,7 @@ export class DonationsForm extends React.Component {
                     <input  type='text' 
                             name='email' 
                             onChange={this.onChange} 
-                            // value={this.state.entities.donations.email}
+                            value={this.state.email}
                         />
                     <br/>
                     <button type = 'submit'>Submit</button>

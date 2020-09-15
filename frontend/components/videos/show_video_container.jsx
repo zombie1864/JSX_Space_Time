@@ -3,7 +3,6 @@ import showVideo from './show_video';
 import { fetchVideo } from '../../actions/video_actions'; 
 
 const msp = ( state, ownProps ) => {
-    // debugger
     return { video : state.entities.videos[ ownProps.match.params.id ]}
 }; 
 
