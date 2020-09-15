@@ -21,7 +21,6 @@ const App = () => (
           < Route path = '/api/videos/:id' component={ShowVideoContainer}/>
           < Route path = '/api/donations' component = {DonationsForm}/>
           < Route path = '/' component = {HomePage}/>
-          {/* < Route path = '/api/donations' component = {DonationContainer}/> */}
       </Switch>
   </div>
 );
