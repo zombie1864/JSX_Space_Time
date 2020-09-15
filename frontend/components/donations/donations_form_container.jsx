@@ -4,7 +4,7 @@ import { createDonation } from '../../actions/donation_action'
 
 const msp = state  => ({
     currentUser: state.entities.users[state.session.id],
-    donation: {
+    donations: {
         monthly_amount: '', 
         first_name: '', 
         last_name: '', 
