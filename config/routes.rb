@@ -4,10 +4,10 @@ Rails.application.routes.draw do
     resource :user, only: [:create]
     resource :session, only: [:create, :destroy, :show]
     resources :videos, only: [:index, :show]
-    resource :donation, only: [:create, :show]
+    resources :donations, only: [:create]
   end 
   root "static_pages#root"
 end
-
+# "the show api doesn't make sense because donations will not be taken from db. user will only be able to add donation to the db"
 # use plurals session is the only exemption 
 # resources not resource, videos not video 

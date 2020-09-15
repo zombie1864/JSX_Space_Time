@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'; 
 
-export class Donations extends React.Component {
+export class DonationsForm extends React.Component {
     render() {
         return (
             <div>
@@ -11,4 +11,4 @@ export class Donations extends React.Component {
     }
 }
 
-export default Donations
+export default DonationsForm

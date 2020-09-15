@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container'
 import IndexVideoContainer from '../videos/video_index_container'
+import DonationsFormContainer from '../donations/donations_form_container'; 
 
 
 export class HomePage extends React.Component {
@@ -26,7 +27,7 @@ export class HomePage extends React.Component {
                         <li className = 'menu-taps'>Video</li>
                         <li className = 'menu-taps'>TV Schedules</li>
                         <li className = 'menu-taps'>Shop</li>
-                        <Link to = '/api/donation' className = 'donation_page'>
+                        <Link to = 'api/donations' className = 'donation_page'>
                         <li className = 'menu-taps'>Donate</li>
                         </Link>
                     </ul>
@@ -52,6 +53,7 @@ export class HomePage extends React.Component {
                 <div className = 'index-videos'>
                     <IndexVideoContainer/>
                 </div>
+                {/* <DonationsFormContainer/> */}
             </div>
          
         )
