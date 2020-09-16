@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container'
 import IndexVideoContainer from '../videos/video_index_container'
-import DonationsFormContainer from '../donations/donations_form_container'; 
+import DonationFormContainer from '../donations/donation_form_container'; 
 
 
 export class HomePage extends React.Component {

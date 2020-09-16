@@ -1,10 +1,10 @@
 import { connect } from 'react-redux'; 
-import DonationsFrom from './donations_form'; 
+import DonationForm from './donation_form'; 
 import { createDonation } from '../../actions/donation_action' 
 
 // const msp = state  => ({
 //     // currentUser: state.entities.users[state.session.id],
-//     donations: {
+//     donation: {
 //         monthly_amount: '', 
 //         first_name: '', 
 //         last_name: '', 
@@ -19,5 +19,5 @@ const mdp = dispatch => ({
     submitDonation: donation => dispatch(createDonation(donation))
 }); 
 
-// export default connect( msp, mdp )(DonationsFrom); 
-export default connect( null, mdp )(DonationsFrom); 
+// export default connect( msp, mdp )(DonationForm); 
+export default connect( null, mdp )(DonationForm); 

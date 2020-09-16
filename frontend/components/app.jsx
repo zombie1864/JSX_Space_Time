@@ -9,8 +9,7 @@ import ShowVideoContainer from './videos/show_video_container'
 import IndexVideoContainer from './videos/video_index_container'
 import Modal from './modal/modal';
 import HomePage from './home_page/home_page'
-import DonationContainer from "./donations/donations_form_container";
-import DonationsForm from './donations/donations_form'
+import DonationForm from './donations/donation_form'
 
 const App = () => (
   <div> 
@@ -19,7 +18,7 @@ const App = () => (
           <AuthRoute exact path="/login" component={LogInFormContainer} />
           <AuthRoute exact path="/signup" component={SignUpFormContainer} />
           < Route path = '/api/videos/:id' component={ShowVideoContainer}/>
-          < Route path = '/api/donations' component = {DonationsForm}/>
+          < Route path = '/api/donations' component = {DonationForm}/>
           < Route path = '/' component = {HomePage}/>
       </Switch>
   </div>

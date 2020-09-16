@@ -2,15 +2,11 @@ class Api::DonationsController < ApplicationController
     def create 
         @donation = Donation.new(donation_params) 
         if @donation.save 
-            render text: 'Thank you for your donation'
+            render :show
         else 
-            render text: 'Something went wrong, sorry!'
+            render :errors, status: 404
         end 
     end 
-
-    # def show 
-    #     render :show 
-    # end 
 
     private 
     def donation_params 

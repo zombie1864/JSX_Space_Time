@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 
-
-export class DonationsForm extends React.Component {
+class DonationForm extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -14,9 +13,9 @@ export class DonationsForm extends React.Component {
             zip_code: '', 
             email: ''
         }
+        debugger 
         this.onChange = this.onChange.bind(this); 
         this.onSubmit = this.onSubmit.bind(this); 
-        // this.state = this.props.form
     }
 
     onChange(e) {
@@ -25,17 +24,7 @@ export class DonationsForm extends React.Component {
 
     onSubmit(e) {
         e.preventDefault();
-        // const form = {
-        //     monthly_amount: this.state.entities.donations.monthly_amount, 
-        //     first_name: this.state.entities.donations.first_name,
-        //     last_name: this.state.entities.donations.last_name, 
-        //     city: this.state.entities.donations.city, 
-        //     state: this.state.entities.donations.state, 
-        //     zip_code: this.state.entities.donations.zip_code, 
-        //     email: this.state.entities.donations.email
-        // }
-        // const form = Object.assign({}, this.state); 
-        // this.props.createDonation(form); 
+
         const donation = new FormData(); 
         const { 
             monthly_amount, 
@@ -47,14 +36,14 @@ export class DonationsForm extends React.Component {
             email 
         } = this.state;
 
-        donation.append('donations[monthly_amount]', monthly_amount);
-        donation.append('donations[first_name]', first_name);
-        donation.append('donations[last_name]', last_name);
-        donation.append('donations[city]', city);
-        donation.append('donations[state]', state);
-        donation.append('donations[zip_code]', zip_code);
+        donation.append('donation[monthly_amount]', monthly_amount);
+        donation.append('donation[first_name]', first_name);
+        donation.append('donation[last_name]', last_name);
+        donation.append('donation[city]', city);
+        donation.append('donation[state]', state);
+        donation.append('donation[zip_code]', zip_code);
         donation.append('donations[email]', email);
-        debugger
+        // debugger
         this.props.submitDonation(donation); 
     }
 
@@ -135,4 +124,4 @@ export class DonationsForm extends React.Component {
     }
 }
 
-export default DonationsForm
+export default DonationForm
