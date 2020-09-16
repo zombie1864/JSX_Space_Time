@@ -13,7 +13,7 @@ class DonationForm extends React.Component {
             zip_code: '', 
             email: ''
         }
-        debugger 
+        // debugger 
         this.onChange = this.onChange.bind(this); 
         this.onSubmit = this.onSubmit.bind(this); 
     }
