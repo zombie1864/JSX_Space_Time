@@ -13,7 +13,6 @@ class DonationForm extends React.Component {
             zip_code: '', 
             email: ''
         }
-        // debugger 
         this.onChange = this.onChange.bind(this); 
         this.onSubmit = this.onSubmit.bind(this); 
     }
@@ -42,7 +41,7 @@ class DonationForm extends React.Component {
         donation.append('donation[city]', city);
         donation.append('donation[state]', state);
         donation.append('donation[zip_code]', zip_code);
-        donation.append('donations[email]', email);
+        donation.append('donation[email]', email);
         // debugger
         this.props.submitDonation(donation); 
     }

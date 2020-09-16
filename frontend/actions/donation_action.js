@@ -6,9 +6,8 @@ const receiveDonationReq = donation => ({
     donation, 
 })
 
-export const createDonation = donation => dispatch => {
-    debugger 
+export const createDonation = donation => dispatch => (
     DonationAPIUtil.createDonation(donation).then(donation => { dispatch(receiveDonationReq(donation))})
-}; 
+); 
 
 // add debugger here 

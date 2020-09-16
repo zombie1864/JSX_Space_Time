@@ -1,9 +1,9 @@
-export const createDonation = formData => {
-    debugger
+export const createDonation = donation => {
+    // debugger
     return $.ajax({
         method: 'POST', 
         url: '/api/donations',
-        data: formData,
+        data: donation,
         processData: false,
         contentType: false
     })

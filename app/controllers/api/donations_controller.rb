@@ -1,12 +1,14 @@
 class Api::DonationsController < ApplicationController
     def create 
         @donation = Donation.new(donation_params) 
-        debugger
+        # debugger
+
         if @donation.save 
-            render :show
+            render "api/donations/show"
         else 
-            render :errors, status: 404
+             render json: @donation.errors.full_messages, status: 422
         end 
+        # debugger
     end 
 
     private 

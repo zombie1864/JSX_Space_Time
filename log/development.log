@@ -41591,3 +41591,543 @@ ActionView::MissingTemplate - Missing template api/donations/errors, application
 :
   app/controllers/api/donations_controller.rb:7:in `create'
 
+Started GET "/" for ::1 at 2020-09-16 14:37:03 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (79.1ms)
+Completed 200 OK in 1029ms (Views: 1011.4ms | ActiveRecord: 13.5ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 14:47:54 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712"}, "donations"=>{"email"=>"zombie1864@gmail.com"}}
+  [1m[35m (3.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:5
+Started GET "/api/videos" for ::1 at 2020-09-16 14:51:21 -0400
+Started GET "/" for ::1 at 2020-09-16 14:51:21 -0400
+Started POST "/api/donations" for ::1 at 2020-09-16 14:51:21 -0400
+  [1m[35m (4.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:5
+Completed 500 Internal Server Error in 280784ms (ActiveRecord: 38.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/donations/errors, application/errors with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Jeff_Klinsmann/Desktop/App_Academy/WEEK_13 (Full_Stack)/Full_Stack_Project/app/views"
+:
+  app/controllers/api/donations_controller.rb:8:in `create'
+
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (12.2ms)
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"john", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712"}, "donations"=>{"email"=>"yes@gmail.com"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:5
+Completed 500 Internal Server Error in 27875ms (ActiveRecord: 0.9ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/donations/errors, application/errors with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Jeff_Klinsmann/Desktop/App_Academy/WEEK_13 (Full_Stack)/Full_Stack_Project/app/views"
+:
+  app/controllers/api/donations_controller.rb:8:in `create'
+
+Completed 200 OK in 28796ms (Views: 28783.9ms | ActiveRecord: 9.2ms)
+
+
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (169.8ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.5ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (235.1ms)
+Completed 200 OK in 271ms (Views: 35.3ms | ActiveRecord: 216.3ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-09-16 14:53:25 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (1.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.5ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (38.6ms)
+Completed 200 OK in 54ms (Views: 25.0ms | ActiveRecord: 21.8ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 14:53:44 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"jax", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712"}, "donations"=>{"email"=>"today@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:5
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 5.4ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/donations/errors, application/errors with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Jeff_Klinsmann/Desktop/App_Academy/WEEK_13 (Full_Stack)/Full_Stack_Project/app/views"
+:
+  app/controllers/api/donations_controller.rb:8:in `create'
+
+Started GET "/" for ::1 at 2020-09-16 14:55:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 138ms (Views: 131.5ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 14:55:53 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"james", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712"}, "donations"=>{"email"=>"y@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:5
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:5
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 7.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/donations/create, application/create with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Jeff_Klinsmann/Desktop/App_Academy/WEEK_13 (Full_Stack)/Full_Stack_Project/app/views"
+:
+  app/controllers/api/donations_controller.rb:8:in `create'
+
+Started GET "/" for ::1 at 2020-09-16 15:45:44 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 120ms (Views: 104.7ms | ActiveRecord: 11.2ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 15:45:59 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"jonny", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712"}, "donations"=>{"email"=>"q@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:5
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:5
+Completed 422 Unprocessable Entity in 38ms (Views: 0.3ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 15:49:03 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 77ms (Views: 71.8ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 15:49:16 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"jack", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712"}, "donations"=>{"email"=>"r@gmail.com"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:5
+Completed 422 Unprocessable Entity in 18ms (Views: 0.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:18:35 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 852ms (Views: 838.3ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:18:36 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:21:56 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Johnson", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712"}, "donations"=>{"email"=>"e@gmail.com"}}
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+Completed 422 Unprocessable Entity in 54486ms (Views: 0.2ms | ActiveRecord: 35.8ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:22:55 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 813ms (Views: 807.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-09-16 16:23:01 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (8.0ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.5ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (55.4ms)
+Completed 200 OK in 73ms (Views: 47.5ms | ActiveRecord: 19.1ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:23:46 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"james", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712"}, "donations"=>{"email"=>"t@gmail.com"}}
+Completed 400 Bad Request in 21ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: monthly_amount:
+  app/controllers/api/donations_controller.rb:15:in `donation_params'
+  app/controllers/api/donations_controller.rb:3:in `create'
+
+Started GET "/" for ::1 at 2020-09-16 16:25:15 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 722ms (Views: 716.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:25:17 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 503ms (Views: 498.9ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:25:22 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712"}, "donations"=>{"email"=>"zombie1864@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+Completed 422 Unprocessable Entity in 24ms (Views: 0.2ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:25:53 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712"}, "donations"=>{"email"=>"zombie1864@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+Completed 422 Unprocessable Entity in 262217ms (Views: 0.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:30:15 -0400
+Started GET "/" for ::1 at 2020-09-16 16:30:15 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 720ms (Views: 713.6ms | ActiveRecord: 3.0ms)
+
+
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (58.7ms)
+Completed 200 OK in 142ms (Views: 83.1ms | ActiveRecord: 50.9ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:30:32 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 93ms (Views: 80.0ms | ActiveRecord: 11.1ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:30:39 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712"}, "donations"=>{"email"=>"zombie1864@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+Completed 422 Unprocessable Entity in 28ms (Views: 0.2ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:32:31 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712"}, "donations"=>{"email"=>"zombie1864@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:32:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 720ms (Views: 716.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:32:38 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712", "email"=>"zombie1864@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:32:58 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 1144ms (Views: 1136.4ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:33:02 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712", "email"=>"zombie1864@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+Completed 422 Unprocessable Entity in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:33:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 92ms (Views: 84.7ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:33:25 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712", "email"=>"zombie1864@gmail.com"}}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+Completed 422 Unprocessable Entity in 112876ms (Views: 1.7ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:37:30 -0400
+  [1m[35m (18.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Jeff_Klinsmann/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 2155ms (Views: 2144.4ms | ActiveRecord: 6.9ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:37:37 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712", "email"=>"zombie1864@gmail.com"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+Completed 422 Unprocessable Entity in 110ms (Views: 0.2ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:40:55 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 58ms (Views: 54.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:40:59 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712", "email"=>"zombie1864@gmail.com"}}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:41:52 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 130ms (Views: 126.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:41:58 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712", "email"=>"zombie1864@gmail.com"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+Completed 422 Unprocessable Entity in 4ms (Views: 0.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:43:27 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 79ms (Views: 68.7ms | ActiveRecord: 8.8ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:43:31 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712", "email"=>"zombie1864@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+Completed 422 Unprocessable Entity in 30ms (Views: 0.2ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:43:45 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 106ms (Views: 99.6ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:43:49 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712", "email"=>"zombie1864@gmail.com"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+Completed 422 Unprocessable Entity in 20ms (Views: 0.3ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:46:13 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 780ms (Views: 764.8ms | ActiveRecord: 12.3ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:46:19 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712", "email"=>"zombie1864@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:6
+Completed 422 Unprocessable Entity in 25ms (Views: 0.2ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:48:55 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 82ms (Views: 71.0ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for ::1 at 2020-09-16 16:49:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 87ms (Views: 82.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:49:24 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712", "email"=>"zombie1864@gmail.com"}}
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: donations:
+  app/controllers/api/donations_controller.rb:16:in `donation_params'
+  app/controllers/api/donations_controller.rb:3:in `create'
+
+Started GET "/" for ::1 at 2020-09-16 16:53:37 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 89ms (Views: 70.2ms | ActiveRecord: 16.4ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:53:42 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712", "email"=>"zombie1864@gmail.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 6.2ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/api/donations_controller.rb:4:in `create'
+
+Started GET "/" for ::1 at 2020-09-16 16:54:00 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 76ms (Views: 70.8ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-16 16:54:03 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"Jeff", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712", "email"=>"zombie1864@gmail.com"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/donations_controller.rb:7
+Completed 422 Unprocessable Entity in 19ms (Views: 0.2ms | ActiveRecord: 6.1ms)
+
+
