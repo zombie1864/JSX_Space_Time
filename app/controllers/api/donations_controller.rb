@@ -1,6 +1,7 @@
 class Api::DonationsController < ApplicationController
     def create 
         @donation = Donation.new(donation_params) 
+        debugger
         if @donation.save 
             render :show
         else 
