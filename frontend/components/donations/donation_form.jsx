@@ -58,66 +58,104 @@ class DonationForm extends React.Component {
                         </Link>
                     </header> 
                 </div>
-                <br/>
-                <form action='submit' onSubmit = {this.onSubmit}>
-                    <label>Monthly Amount</label>
+                <div className = 'donation_container'>
                     <br/>
-                    <input  type='text' 
-                            name='monthly_amount' 
-                            onChange={this.onChange} 
-                            value={this.state.monthly_amount}
-                        />                  
-                    <br/>
-                    <label>First Name</label>
-                    <br/>
-                    <input  type='text' 
-                            name='first_name' 
-                            onChange={this.onChange} 
-                            value={this.state.first_name} 
-                        />                   
-                    <br/>
-                    <label>Last name</label>
-                    <br/>
-                    <input  type='text' 
-                            name='last_name' 
-                            onChange={this.onChange} 
-                            value={this.state.last_name} 
-                        />                    
-                    <br/>
-                    <label>City</label>
-                    <br/>
-                    <input  type='text' 
-                            name='city' 
-                            onChange={this.onChange} 
-                            value={this.state.city}
-                        />                    
-                    <br/>
-                    <label>State</label>
-                    <br/>
-                    <input  type='text' 
-                            name='state' 
-                            onChange={this.onChange} 
-                            value={this.state.state}
-                        />                    
-                    <br/>
-                    <label>Zip Code</label>
-                    <br/>
-                    <input  type='text' 
-                            name='zip_code' 
-                            onChange={this.onChange} 
-                            value={this.state.zip_code}
-                        />                    
-                    <br/>
-                    <label>Email</label>
-                    <br/>
-                    <input  type='text' 
-                            name='email' 
-                            onChange={this.onChange} 
-                            value={this.state.email}
-                        />
-                    <br/>
-                    <button type = 'submit'>Submit</button>
-                </form>
+                    <form action='submit' onSubmit = {this.onSubmit}>
+                        <label 
+                            className = 'label_name'
+                            >Monthly Amount</label>
+                        <br/>
+                        <label 
+                            className = 'label_name'
+                            >$</label>
+                        <input  type='text' 
+                                name='monthly_amount' 
+                                onChange={this.onChange} 
+                                value={this.state.monthly_amount} 
+                                className = 'input_style'
+                            />                  
+                        <br/>
+                        <label 
+                            className = 'label_name'
+                            >First Name</label>
+                        <br/>
+                        <input  type='text' 
+                                name='first_name' 
+                                onChange={this.onChange} 
+                                value={this.state.first_name} 
+                                className = 'input_style'
+                            />                   
+                        <br/>
+                        <div className = 'lname'>
+                            <label 
+                                className = 'label_name'
+                                >Last name</label>
+                            <br/>
+                            <input  type='text' 
+                                    name='last_name' 
+                                    onChange={this.onChange} 
+                                    value={this.state.last_name} 
+                                    className = 'input_style'
+                                />                    
+                        </div>
+                        <div className = 'city'>
+                            <label 
+                                className = 'label_name'
+                                >City</label>
+                            <br/>
+                            <input  type='text' 
+                                    name='city' 
+                                    onChange={this.onChange} 
+                                    value={this.state.city}
+                                    className = 'input_style'
+                                />                    
+                            <br/>
+                        </div>
+                        <div className = 'state'>
+                            <label 
+                                className = 'label_name'
+                                >State</label>
+                            <br/>
+                            <input  type='text' 
+                                    name='state' 
+                                    onChange={this.onChange} 
+                                    value={this.state.state}
+                                    className = 'input_style'
+                                />                    
+                            <br/>
+                        </div>
+                        <div className = 'zip_code'>
+                            <label 
+                                className = 'label_name'
+                                >Zip Code</label>
+                            <br/>
+                            <input  type='text' 
+                                    name='zip_code' 
+                                    onChange={this.onChange} 
+                                    value={this.state.zip_code}
+                                    className = 'input_style'
+                                />                    
+                            <br/>
+                        </div>
+                        <div>
+                            <label 
+                                className = 'label_name'
+                                >Email</label>
+                            <br/>
+                            <input  type='text' 
+                                    name='email' 
+                                    onChange={this.onChange} 
+                                    value={this.state.email}
+                                    className = 'input_style'
+                                />
+                            <br/>
+                        </div>
+                        <button 
+                            type = 'submit'
+                            className = 'submit_btn'
+                            >SUBMIT DONATION</button>
+                    </form>
+                </div>
             </div>
         )
     }
