@@ -14,6 +14,7 @@ class VideoIndex extends React.Component {
                 <Link to = {`/api/videos/${video.id}`}>
                 <img src={video.image_url} width = '430' height = '220'/>
                 </Link>
+            <p>{video.title}</p>
             </li>
             )
         })
