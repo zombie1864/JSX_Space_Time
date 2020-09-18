@@ -1,18 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 
+const initialState = {
+    monthly_amount: '', 
+    first_name: '', 
+    last_name: '', 
+    city: '', 
+    state: '', 
+    zip_code: '', 
+    email: ''
+}
+
 class DonationForm extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            monthly_amount: '', 
-            first_name: '', 
-            last_name: '', 
-            city: '', 
-            state: '', 
-            zip_code: '', 
-            email: ''
-        }
+        this.state = initialState
         this.onChange = this.onChange.bind(this); 
         this.onSubmit = this.onSubmit.bind(this); 
     }
@@ -44,6 +46,7 @@ class DonationForm extends React.Component {
         donation.append('donation[email]', email);
         // debugger
         this.props.submitDonation(donation); 
+        this.setState(initialState)
     }
 
     render() {
