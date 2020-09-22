@@ -14,7 +14,7 @@ class VideoIndex extends React.Component {
                 className = 'indexed-video'
                 >
                 <Link 
-                    to = {`/api/videos/${video.id}`}
+                    to = {`/videos/${video.id}`}
                     >
                 <div 
                     className = 'index_video_container'

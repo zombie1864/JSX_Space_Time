@@ -1,6 +1,6 @@
 import React from 'react'; 
 import ReactPlayer from 'react-player'
-import { Link } from 'react-router-dom';
+import { Link, Router } from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container'
 
 
@@ -29,14 +29,22 @@ class ShowVideo extends React.Component {
                         <GreetingContainer />
                     </div>
                     <nav >
-                        <ul>
+                    <ul>
+                        <Link
+                            to = '/'
+                            >
                             <li className = 'menu-taps'>Home</li>
-                            <li className = 'menu-taps'>Shows</li>
-                            <li className = 'menu-taps'>Video</li>
-                            <li className = 'menu-taps'>TV Schedules</li>
-                            <li className = 'menu-taps'>Shop</li>
+                        </Link>
+                        <li className = 'menu-taps'>Shows</li>
+                        <li className = 'menu-taps'>Video</li>
+                        <li className = 'menu-taps'>TV Schedules</li>
+                        <li className = 'menu-taps'>Shop</li>
+                        <Link 
+                            to = '/donations' 
+                            >
                             <li className = 'menu-taps'>Donate</li>
-                        </ul>
+                        </Link>
+                    </ul>
                     </nav>
                 </div>   
                 <img src={video.image_url} width = '1280' height = '720' className = 'show-bck-img'/>

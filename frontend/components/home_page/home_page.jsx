@@ -22,13 +22,20 @@ export class HomePage extends React.Component {
                 </div>
                 <nav >
                     <ul>
-                        <li className = 'menu-taps'>Home</li>
+                        <Link
+                            to = '/'
+                            >
+                            <li className = 'menu-taps'>Home</li>
+                        </Link>
                         <li className = 'menu-taps'>Shows</li>
                         <li className = 'menu-taps'>Video</li>
                         <li className = 'menu-taps'>TV Schedules</li>
                         <li className = 'menu-taps'>Shop</li>
-                        <Link to = 'api/donations' className = 'donation_page'>
-                        <li className = 'menu-taps'>Donate</li>
+                        <Link 
+                            to = 'api/donations' 
+                            className = 'donation_page'
+                            >
+                            <li className = 'menu-taps'>Donate</li>
                         </Link>
                     </ul>
                 </nav>
