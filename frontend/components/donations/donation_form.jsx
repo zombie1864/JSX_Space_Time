@@ -95,14 +95,14 @@ class DonationForm extends React.Component {
                         <br/>
                         <div className = 'lname'>
                             <label 
-                                className = 'label_name'
+                                className = 'label_name donation-float-right'
                                 >Last name</label>
                             <br/>
                             <input  type='text' 
                                     name='last_name' 
                                     onChange={this.onChange} 
                                     value={this.state.last_name} 
-                                    className = 'input_style'
+                                    className = 'input_style donation-float-right'
                                 />                    
                         </div>
                         <div className = 'city'>
@@ -127,20 +127,21 @@ class DonationForm extends React.Component {
                                     name='state' 
                                     onChange={this.onChange} 
                                     value={this.state.state}
-                                    className = 'input_style'
+                                    className = 'input_style donation-float-mid'
                                 />                    
                             <br/>
                         </div>
                         <div className = 'zip_code'>
-                            <label 
-                                className = 'label_name'
-                                >Zip Code</label>
                             <br/>
+                            <label 
+                                className = 'label_name donation-float-right'
+                                >Zip Code</label>
+                                <br/>
                             <input  type='text' 
                                     name='zip_code' 
                                     onChange={this.onChange} 
                                     value={this.state.zip_code}
-                                    className = 'input_style'
+                                    className = 'input_style donation-float-right'
                                 />                    
                             <br/>
                         </div>

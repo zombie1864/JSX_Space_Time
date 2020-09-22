@@ -19,6 +19,13 @@
     background-color: rgb(32, 32, 32);
 }
 
+.donation-float-right {
+    position: relative;
+    width: 25%;
+    float: right;
+    top: -57px;
+}
+
 .lname {
     /* position: relative;
     right: -500px;
