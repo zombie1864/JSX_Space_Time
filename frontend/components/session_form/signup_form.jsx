@@ -47,17 +47,14 @@ export class Signup extends React.Component {
         return (
 
             <div className = 'sign-up'>
-                                <div className = 'main-menu'>
-                <header>
-                <Link to = '/' className = 'header-link'>
-                    <h1>
-                        <img className = 'home-icon' src={window.Home_icon} alt="HOME"/>
-                    </h1>
-                </Link>
-                </header> 
-                <div className = 'signin-button'>
-                <GreetingContainer />
-                </div>
+                <div className = 'main-menu'>
+                    <header>
+                    <Link to = '/' className = 'header-link'>
+                        <h1>
+                            <img className = 'home-icon' src={window.Home_icon} alt="HOME"/>
+                        </h1>
+                    </Link>
+                    </header> 
                 </div>
 
                 <form onSubmit = {this.submit}>
@@ -72,8 +69,6 @@ export class Signup extends React.Component {
                             value = {this.state.last_name}
                             placeholder='Last Name'
                             onChange ={this.update('last_name')}/>
-                            <br/><br/>
-
                             <br/><br/>
                     <input type="text"
                             value = {this.state.email}

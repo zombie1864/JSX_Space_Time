@@ -18,7 +18,7 @@ export class HomePage extends React.Component {
                 </Link>
                 </header> 
                 <div className = 'signin-button'>
-                <GreetingContainer />
+                    <GreetingContainer />
                 </div>
                 <nav >
                     <ul>
