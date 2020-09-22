@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container'
 import IndexVideoContainer from '../videos/video_index_container'
-import DonationFormContainer from '../donations/donation_form_container'; 
+import Footer from './footer'
 
 
 export class HomePage extends React.Component {
@@ -61,7 +61,9 @@ export class HomePage extends React.Component {
                 <div className = 'index-videos'>
                     <IndexVideoContainer/>
                 </div>
-                {/* <DonationsFormContainer/> */}
+                <div>
+                    <Footer/>
+                </div>
             </div>
          
         )
