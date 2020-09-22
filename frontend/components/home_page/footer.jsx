@@ -4,39 +4,43 @@ class Footer extends React.Component {
     render() {
         return (
             <div>
-                <footer className="">
-                <ul className="">
+                <footer className="footer-field">
+                <ul className="footer-ul">
                     <li className="">
                     <a 
-                        href="https://zombie1864.github.io/">
+                        href="https://zombie1864.github.io/" target = '_blank'
+                            className = 'footer-link'>
                         Portfolio Site
                     </a>
                     </li>
                 </ul>
-                <ul className="">
+                <ul className="footer-ul">
                     <li className="">
                     <a
-                        href="https://www.linkedin.com/in/jeff-varela-a3194692/"
+                        href="https://www.linkedin.com/in/jeff-varela-a3194692/" target = '_blank'
+                            className = 'footer-link'
                     >
                         LinkedIn
                     </a>
                     </li>
                 </ul>
-                <ul className="">
+                <ul className="footer-ul">
                     <li className="">
-                    <a href="">
+                    <a href="" target = '_blank'
+                        className = 'footer-link'>
                         Angellist
                     </a>
                     </li>
                 </ul>
-                <ul className="">
+                <ul className="footer-ul">
                     <li className="">
-                    <a href="https://github.com/zombie1864">
+                    <a href="https://github.com/zombie1864" target = '_blank'
+                        className = 'footer-link'>
                         Github
                     </a>
                     </li>
                 </ul>
-                <aside className="">© 2020 JSX Space Time</aside>
+                <aside className="footer-ul">© 2020 JSX Space Time</aside>
                 </footer>
             </div>
         )

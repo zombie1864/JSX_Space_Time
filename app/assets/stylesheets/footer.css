@@ -1,0 +1,41 @@
+.footer-field {
+    background-color: rgb(24, 36, 126);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;    
+    padding-left: 200px;
+}
+
+.footer-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* height: 55%; */
+    padding: 25px 55px 50px 35px;
+    font-size: 17px;
+    color: white;
+    position: relative;
+    left: -120px;
+    /* font-weight: 500; */
+}
+
+.footer-link {
+    color: aliceblue;
+}
+
+.footer-link:link {
+    text-decoration: none;
+  }
+  
+.footer-link:visited {
+    text-decoration: none;
+  }
+  
+.footer-link:hover {
+    text-decoration: underline;
+  }
+  
+.footer-link:active {
+    text-decoration: underline;
+  }
