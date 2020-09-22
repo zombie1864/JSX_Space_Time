@@ -61,10 +61,12 @@ export class HomePage extends React.Component {
                                     Visit Offical Site</a> 
                         </div>
                     </div>
-                    <img className = 'home-bck-img' src={ window.PBS_webpage_img} alt="TEST"/>
                 </div>
                 <div className = 'index-videos'>
                     <IndexVideoContainer/>
+                </div>
+                <div>
+                <img className = 'home-bck-img' src={ window.PBS_webpage_img} alt="TEST"/>
                 </div>
                 <div>
                     <Footer/>
