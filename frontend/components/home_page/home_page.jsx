@@ -27,10 +27,10 @@ export class HomePage extends React.Component {
                             >
                             <li className = 'menu-taps'>Home</li>
                         </Link>
-                        <li className = 'menu-taps'>Shows</li>
-                        <li className = 'menu-taps'>Video</li>
-                        <li className = 'menu-taps'>TV Schedules</li>
-                        <li className = 'menu-taps'>Shop</li>
+                        {/* <li className = 'menu-taps'>Shows</li> */}
+                        {/* <li className = 'menu-taps'>Video</li> */}
+                        {/* <li className = 'menu-taps'>TV Schedules</li> */}
+                        {/* <li className = 'menu-taps'>Shop</li> */}
                         <Link 
                             to = 'api/donations' 
                             className = 'donation_page'
@@ -47,13 +47,12 @@ export class HomePage extends React.Component {
                     Explore the universe and your mind with astrophysicist Matt O'Dowd PhD. 
                     </p>
                     <br/>
-                    <div className = 'list-and-site'>
+                    <div className = 'disclaimer-and-site'>
                         <p>
-                            + MyList 
+                            The following website is for educational and demenstrational purposes. All content is reserved to PBS.
                         </p>
-                        <p>
-                            Visit Offical Site 
-                        </p>
+                        <br/>
+                        <a href="https://www.pbs.org/show/pbs-space-time/">Visit Offical Site</a> 
                     </div>
                     <img className = 'home-bck-img' src={ window.PBS_webpage_img} alt="TEST"/>
                 </div>

@@ -15,10 +15,12 @@
 .menu-taps {
     display: inline-block;
     align-items: center;
+    font-size: large;
     text-align: right;
     position: relative;
-    right: -0800px;
+    right: -1000px;
+    top: 25px;
     color: cornsilk;
-    width: 80px;
+    width: 100px;
     vertical-align: text-top;
 }
