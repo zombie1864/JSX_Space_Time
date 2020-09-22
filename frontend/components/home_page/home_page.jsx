@@ -51,7 +51,7 @@ export class HomePage extends React.Component {
                     <br/>
                     <div className = 'disclaimer-and-site'>
                         <p>
-                            The following website is for educational and demonstrational purposes. All content is reserved to PBS.
+                            The following website is for educational and demonstrational purposes. All content is reserved and credited to PBS.
                         </p>
                         <br/>
                         <a href="https://www.pbs.org/show/pbs-space-time/">Visit Offical Site</a> 

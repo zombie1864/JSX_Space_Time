@@ -35,14 +35,16 @@ class ShowVideo extends React.Component {
                             >
                             <li className = 'menu-taps'>Home</li>
                         </Link>
-                        <li className = 'menu-taps'>Shows</li>
-                        <li className = 'menu-taps'>Video</li>
-                        <li className = 'menu-taps'>TV Schedules</li>
-                        <li className = 'menu-taps'>Shop</li>
+                        {/* <li className = 'menu-taps'>Shows</li> */}
+                        {/* <li className = 'menu-taps'>Video</li> */}
+                        {/* <li className = 'menu-taps'>TV Schedules</li> */}
+                        {/* <li className = 'menu-taps'>Shop</li> */}
                         <Link 
                             to = '/donations' 
                             >
-                            <li className = 'menu-taps'>Donate</li>
+                            <li 
+                                className = 'menu-taps'
+                                >Donate</li>
                         </Link>
                     </ul>
                     </nav>
