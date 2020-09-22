@@ -7,6 +7,7 @@ import ShowVideoContainer from './videos/show_video_container'
 import Modal from './modal/modal';
 import HomePage from './home_page/home_page'
 import DonationFormContainer from '../components/donations/donation_form_container'
+import DonationShow from './donations/donation_show'
 
 const App = () => (
   <div> 
@@ -17,6 +18,7 @@ const App = () => (
           < Route path = '/videos/:id' component={ShowVideoContainer}/>
           < Route path = '/donations' component = {DonationFormContainer}/>
           < Route path = '/' component = {HomePage}/>
+          < Route path = '/donation_show' component = {DonationShow}/>
       </Switch>
   </div>
 );

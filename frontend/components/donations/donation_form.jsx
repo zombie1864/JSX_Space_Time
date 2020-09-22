@@ -48,7 +48,7 @@ class DonationForm extends React.Component {
         this.props.submitDonation(donation)
         // .then(push to his); 
         this.setState(initialState)
-        this.props.history.push('/') // comes from props/React
+        this.props.history.push('/donation_show') // comes from props/React
         //history.push -> redirects to url 
 
     }
