@@ -49,38 +49,61 @@ export class Signup extends React.Component {
             <div className = 'sign-up'>
                 <div className = 'main-menu'>
                     <header>
-                    <Link to = '/' className = 'header-link'>
-                        <h1>
-                            <img className = 'home-icon' src={window.Home_icon} alt="HOME"/>
-                        </h1>
-                    </Link>
+                        <Link to = '/' className = 'signup-header-link'>
+                            <h1>
+                                <img className = 'home-icon' src={window.Home_icon} alt="HOME"/>
+                            </h1>
+                        </Link>
                     </header> 
                 </div>
 
-                <form onSubmit = {this.submit}>
+                <form 
+                    onSubmit = {this.submit} 
+                    className = 'signup_form_container'
+                    >
                     <div>{ this.renderErrors() }</div>
-                    <br/>
-                    <input type="text"
-                            value = {this.state.first_name}
-                            placeholder='First Name'
-                            onChange ={this.update('first_name')}/>
-                            <br/><br/>
-                    <input type="text"
-                            value = {this.state.last_name}
-                            placeholder='Last Name'
-                            onChange ={this.update('last_name')}/>
-                            <br/><br/>
-                    <input type="text"
-                            value = {this.state.email}
-                            placeholder='email'
-                            onChange ={this.update('email')}/>
-                            <br/><br/>
-                    <input type="password"
-                            value = {this.state.password}
-                            placeholder='password'
-                            onChange ={this.update('password')}/>
-                            <br/><br/>
-                    <input type="submit" value = {this.props.formType}/>
+                    <h1
+                        className = 'signup_slogan'
+                        >Create a JSX Account</h1>
+                        <label
+                            className = 'labels'>First Name:</label>
+                        <br/>
+                        <input type="text"
+                                value = {this.state.first_name}
+                                onChange ={this.update('first_name')}
+                                className = 'signup-input'/>
+                                <br/><br/>
+                        <label
+                            className = 'float-right labels-right'
+                        >Last Name:</label>
+                            <br/>
+                        <input type="text"
+                                value = {this.state.last_name}
+                                onChange ={this.update('last_name')}
+                                className = 'float-right signup-input'/>
+                                <br/>
+                        <label
+                            className = 'labels'>Email:</label>
+                        <br/>
+                        <input type="text"
+                                value = {this.state.email}
+                                onChange ={this.update('email')}
+                                className = 'signup-input'/>
+                                <br/><br/>
+                        <label
+                            className = 'float-right labels-right'>Password:</label>
+                        <br/>
+                        <input type="password"
+                                value = {this.state.password}
+                                onChange ={this.update('password')}
+                                className = 'float-right signup-input'/>
+                                <br/><br/>
+
+                    <input 
+                        type = "submit" 
+                        value = {this.props.formType}
+                        className = 'signup-btn'
+                        />
                 </form>
                 <div>{this.renderErrors()}</div>
             </div>
