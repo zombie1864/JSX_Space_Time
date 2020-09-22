@@ -15,8 +15,11 @@
     padding-left: 20px;
 }
 
-.list-and-site{
-    color: red;
+.disclaimer-and-site {
+    color: rgba(255, 248, 220, 0.5);
     font-size: 17px;
     padding-left: 20px;
+    line-height: 1.5;
+    font-family: Helvetica;
+    width: 18%;
 }
