@@ -44,45 +44,53 @@ export class Login extends React.Component {
         return (
             <div>
                 <div className = 'main-menu'>
-                <header>
-                <Link to = '/' className = 'header-link'>
-                    <h1>
-                        <img className = 'home-icon' src={window.Home_icon} alt="HOME"/>
-                    </h1>
-                </Link>
-                </header> 
-                <div className = 'signin-button'>
-                <GreetingContainer />
-                </div>
-                <nav >
-                    <ul>
-                        <li className = 'menu-taps'>Home</li>
-                        <li className = 'menu-taps'>Shows</li>
-                        <li className = 'menu-taps'>Video</li>
-                        <li className = 'menu-taps'>TV Schedules</li>
-                        <li className = 'menu-taps'>Shop</li>
-                        <li className = 'menu-taps'>Donate</li>
-                    </ul>
-                </nav>
+                    <header>
+                        <Link to = '/' className = 'signup-header-link'>
+                            <h1>
+                                <img className = 'home-icon' src={window.Home_icon} alt="HOME"/>
+                            </h1>
+                        </Link>
+                    </header> 
                 </div>
 
-                <form onSubmit = {this.submit}>
+                <form 
+                    onSubmit = {this.submit}
+                    className = 'login_form_container'
+                    >
+                    <p className = 'login-text'>
+                        Sign in with your JSX account
+                    </p>
+                    <br/>
+                    <label
+                        className = 'login-labels'>Email:</label>
+                        <br/>
                     <input type="text"
                             value = {this.state.email}
                             onChange = {this.update('email')}
-                            placeholder = 'Email' />
+                            className = 'login-input'
+                            />
                     <br/>
                     <br/>
+                    <label
+                        className = 'login-labels'>Password:</label>
+                        <br/>
                     <input type="password"
                             value = {this.state.password}
                             onChange = {this.update('password')}
-                            placeholder = 'Password'/>
+                            className = 'login-input'
+                            />
                     <br/>
                     <br/>
-                    <input type="submit" value = {this.props.formType}/>
+                    <input 
+                        type="submit" 
+                        value = {this.props.formType}
+                        className = 'login-btn'/>
                     <br/>
                     <br/>
-                    <button className = 'demo-sign' onClick = { this.demoUser }>Sign in as demoUser</button>
+                    <button  
+                        onClick = { this.demoUser }
+                        className = 'demo-btn'
+                        >Sign in as demoUser</button>
                 </form>
             </div>
         )

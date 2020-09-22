@@ -1,6 +1,5 @@
 .signup-header-link {
     position: absolute;
-    /* width: 30%; */
     margin: 0 auto;
     top: 5%;
     left: 50%;
@@ -10,7 +9,6 @@
 
 .signup_form_container {
     position: absolute;
-    /* width: 30%; */
     margin: 0 auto;
     top: 40%;
     left: 50%;
