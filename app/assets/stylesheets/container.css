@@ -23,3 +23,20 @@
     font-family: Helvetica;
     width: 18%;
 }
+
+.offical-site {
+    margin: 5px;
+    border-radius: 30px;
+    border: solid 2px black;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 17px;
+    color: rgba(255, 248, 220, 0.5);
+    padding: 10px; 
+    opacity: 1;
+}
+
+.offical-site:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(76, 118, 179);
+    transition: 0.8s;
+}

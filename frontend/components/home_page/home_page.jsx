@@ -54,7 +54,12 @@ export class HomePage extends React.Component {
                             The following website is for educational and demonstrational purposes. All content is reserved and credited to PBS.
                         </p>
                         <br/>
-                        <a href="https://www.pbs.org/show/pbs-space-time/">Visit Offical Site</a> 
+                        <div>
+                            <a 
+                                href="https://www.pbs.org/show/pbs-space-time/"
+                                className = 'offical-site'>
+                                    Visit Offical Site</a> 
+                        </div>
                     </div>
                     <img className = 'home-bck-img' src={ window.PBS_webpage_img} alt="TEST"/>
                 </div>
