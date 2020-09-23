@@ -21,10 +21,6 @@
     background-color: rgb(32, 32, 32);
 }
 
-.donation-float-left-label-amt {
-
-}
-
 .donation-float-left-amt {
     position: absolute;
     width: 20%;
@@ -32,7 +28,7 @@
 
 .donation-float-left-label-fname {
     position: absolute;
-    width: 25%;
+    /* width: 25%; */
     float: left;
     top: 80px;
     left: 0px;
@@ -44,6 +40,7 @@
     float: left;
     top: 105px;
     left: 0px;
+    z-index: 1;
 }
 
 .donation-float-right-label-lname {
@@ -60,6 +57,7 @@
     float: right;
     top: 105px;
     left: 520px;
+    z-index: 1;
 }
 
 .donation-float-left-label-city {
@@ -114,28 +112,8 @@
     width: 20%;
 }
 
-.lname {
-    /* position: relative;
-    right: -500px;
-    top: -50px; */
-}
-
 .city {
     position: relative;
-}
-
-.state {
-    /* position: relative;
-    left: 200px; 
-    top: -50px;  */
-}
-
-.zip_code {
-    /* position: relative;
-    display: block;
-    margin: 0 auto;
-    left: 400px; 
-    top: -100px;  */
 }
 
 .submit_btn {
