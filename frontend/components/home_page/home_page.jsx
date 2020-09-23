@@ -57,7 +57,8 @@ export class HomePage extends React.Component {
                         <div>
                             <a 
                                 href="https://www.pbs.org/show/pbs-space-time/"
-                                className = 'offical-site'>
+                                className = 'offical-site'
+                                target = '_blank'>
                                     Visit Offical Site</a> 
                         </div>
                     </div>

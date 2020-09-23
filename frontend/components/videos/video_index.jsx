@@ -16,22 +16,22 @@ class VideoIndex extends React.Component {
                 <Link 
                     to = {`/videos/${video.id}`}
                     >
-                <div 
-                    className = 'index_video_container'
-                    >
-                    <img 
-                        src={video.image_url} 
-                        width = '430' 
-                        height = '220'
-                        />
-                    <img 
-                        src={window.video_play_icon} alt="YES"
-                        className = 'video_play_icon'
-                        />
-                </div>
+                    <div 
+                        className = 'index_video_container'
+                        >
+                        <img 
+                            src={video.image_url} 
+                            width = '430' 
+                            height = '220'
+                            />
+                        <img 
+                            src={window.video_play_icon} alt="YES"
+                            className = 'video_play_icon'
+                            />
+                    </div>
                 </Link>
                 <p 
-                    className = 'video_details'
+                    className = 'video_details_title'
                     >{video.title}</p>
                 <p 
                     className = 'video_details'
