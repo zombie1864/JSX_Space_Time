@@ -117,8 +117,12 @@
 }
 
 .submit_btn {
-    position: relative;
-    top: 10px;
+    position: absolute;
+    margin: 0 auto;
+    top: 130%;
+    left: 41%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
     display: block;
     background-color: teal;
     color: thistle;
