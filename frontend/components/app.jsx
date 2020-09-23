@@ -17,10 +17,12 @@ const App = () => (
           <AuthRoute exact path="/signup" component={SignUpFormContainer} />
           < Route path = '/videos/:id' component={ShowVideoContainer}/>
           < Route path = '/donations' component = {DonationFormContainer}/>
-          < Route path = '/' component = {HomePage}/>
           < Route path = '/donation_show' component = {DonationShow}/>
+          < Route path = '/' component = {HomePage}/>
       </Switch>
   </div>
 );
 
 export default App;
+
+// the Route path = '/' always needs to be last 
