@@ -58,7 +58,7 @@ class DonationForm extends React.Component {
             <div>
                 <div className = 'main-menu'>
                     <header>
-                        <Link to = '/' className = 'header-link'>
+                        <Link to = '/' className = 'signup-header-link'>
                             <h1>
                                 <img className = 'home-icon' src={window.Home_icon} alt="HOME"/>
                             </h1>
@@ -69,101 +69,101 @@ class DonationForm extends React.Component {
                     <br/>
                     <form action='submit' onSubmit = {this.onSubmit}>
                         <label 
-                            className = 'label_name'
-                            >Monthly Amount</label>
+                            className = 'label_name donation-float-left-label-amt'
+                            >Monthly Amount:</label>
                         <br/>
                         <label 
-                            className = 'label_name'
+                            className = 'label_name dollar-label'
                             >$</label>
                         <input  type='text' 
                                 name='monthly_amount' 
                                 onChange={this.onChange} 
                                 value={this.state.monthly_amount} 
-                                className = 'input_style'
+                                className = 'input_style donation-float-left-amt'
                             />                  
                         <br/>
                         <label 
-                            className = 'label_name'
-                            >First Name</label>
+                            className = 'label_name donation-float-left-label-fname'
+                            >First Name:</label>
                         <br/>
                         <input  type='text' 
                                 name='first_name' 
                                 onChange={this.onChange} 
                                 value={this.state.first_name} 
-                                className = 'input_style'
+                                className = 'input_style donation-float-left-fname'
                             />                   
                         <br/>
                         <div className = 'lname'>
                             <label 
-                                className = 'label_name donation-float-right'
-                                >Last name</label>
+                                className = 'label_name donation-float-right-label-lname'
+                                >Last name:</label>
                             <br/>
                             <input  type='text' 
                                     name='last_name' 
                                     onChange={this.onChange} 
                                     value={this.state.last_name} 
-                                    className = 'input_style donation-float-right'
+                                    className = 'input_style donation-float-right-lname'
                                 />                    
                         </div>
                         <div className = 'city'>
                             <label 
-                                className = 'label_name'
-                                >City</label>
+                                className = 'label_name donation-float-left-label-city'
+                                >City:</label>
                             <br/>
                             <input  type='text' 
                                     name='city' 
                                     onChange={this.onChange} 
                                     value={this.state.city}
-                                    className = 'input_style'
+                                    className = 'input_style donation-float-left-city'
                                 />                    
                             <br/>
                         </div>
                         <div className = 'state'>
                             <label 
-                                className = 'label_name'
-                                >State</label>
+                                className = 'label_name donation-float-mid-label-state'
+                                >State:</label>
                             <br/>
                             <input  type='text' 
                                     name='state' 
                                     onChange={this.onChange} 
                                     value={this.state.state}
-                                    className = 'input_style donation-float-mid'
+                                    className = 'input_style donation-float-mid-state'
                                 />                    
                             <br/>
                         </div>
                         <div className = 'zip_code'>
                             <br/>
                             <label 
-                                className = 'label_name donation-float-right'
-                                >Zip Code</label>
+                                className = 'label_name donation-float-right-label-zip'
+                                >Zip Code:</label>
                                 <br/>
                             <input  type='text' 
                                     name='zip_code' 
                                     onChange={this.onChange} 
                                     value={this.state.zip_code}
-                                    className = 'input_style donation-float-right'
+                                    className = 'input_style donation-float-right-zip'
                                 />                    
                             <br/>
                         </div>
                         <div>
                             <label 
                                 className = 'label_name'
-                                >Email</label>
+                                >Email:</label>
                             <br/>
                             <input  type='text' 
                                     name='email' 
                                     onChange={this.onChange} 
                                     value={this.state.email}
-                                    className = 'input_style'
+                                    className = 'input_style donation-float-left-email'
                                 />
                             <br/>
                         </div>
-                        <button 
-                            type = 'submit'
-                            className = 'submit_btn'
-                            >SUBMIT DONATION</button>
                     </form>
                 </div>
+                <button 
+                    type = 'submit'
+                    className = 'submit_btn'
+                    >SUBMIT DONATION</button>
             </div>
         )
     }

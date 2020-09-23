@@ -2,10 +2,12 @@
     position: relative;
     margin: auto; 
     width: 50%;
-    /* left: 50%; */
-    /* top: 25%; */
-    border: 1px solid #aaaaaa;
-    border-color: tomato;
+    left: 5%;
+}
+
+.dollar-label {
+    position: absolute;
+    left: -15px;
 }
 
 .label_name {
@@ -19,11 +21,97 @@
     background-color: rgb(32, 32, 32);
 }
 
-.donation-float-right {
-    position: relative;
+.donation-float-left-label-amt {
+
+}
+
+.donation-float-left-amt {
+    position: absolute;
+    width: 20%;
+}
+
+.donation-float-left-label-fname {
+    position: absolute;
+    width: 25%;
+    float: left;
+    top: 80px;
+    left: 0px;
+}
+
+.donation-float-left-fname {
+    position: absolute;
+    width: 20%;
+    float: left;
+    top: 105px;
+    left: 0px;
+}
+
+.donation-float-right-label-lname {
+    position: absolute;
     width: 25%;
     float: right;
-    top: -57px;
+    top: 81px;
+    left: 530px;
+}
+
+.donation-float-right-lname {
+    position: absolute;
+    width: 20%;
+    float: right;
+    top: 105px;
+    left: 520px;
+}
+
+.donation-float-left-label-city {
+    position: absolute;
+    width: 25%;
+    float: left;
+    top: 40px;
+    left: 0px;
+}
+
+.donation-float-left-city {
+    position: absolute;
+    width: 20%;
+    float: left;
+    top: 65px;
+    left: 0px;
+}
+
+.donation-float-mid-label-state {
+    position: absolute;
+    width: 25%;
+    float: right;
+    top: 141px;
+    left: 220px;
+}
+
+.donation-float-mid-state {
+    position: absolute;
+    width: 20%;
+    float: right;
+    top: 163px;
+    left: 220px;
+}
+
+.donation-float-right-label-zip {
+    position: absolute;
+    width: 25%;
+    float: right;
+    top: 141px;
+    left: 530px;
+}
+
+.donation-float-right-zip {
+    position: absolute;
+    width: 20%;
+    float: right;
+    top: 163px;
+    left: 520px;
+}
+
+.donation-float-left-email {
+    width: 20%;
 }
 
 .lname {
@@ -51,6 +139,8 @@
 }
 
 .submit_btn {
+    position: relative;
+    top: 10px;
     display: block;
     background-color: teal;
     color: thistle;
