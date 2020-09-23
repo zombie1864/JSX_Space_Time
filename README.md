@@ -1,5 +1,3 @@
-# README
-
 ![alt text](app/assets/images/JSX_Logo.png)
 
 * JSX Space Time is an app that helps mainstream video broadcast from PBS. Users can watch in depth discussions about the nature of reality with astrophysicist Matt O'Dowd, PhD. 
