@@ -1,0 +1,14 @@
+.donation-thank-you-card {
+    position: absolute;
+    margin: auto; 
+    width: 75%;
+    /* position: absolute; */
+    /* margin: 0 auto; */
+    top: 480px;
+    /* top: 60%; */
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    /* left: 50%; */
+    /* top: 25%; */
+}
