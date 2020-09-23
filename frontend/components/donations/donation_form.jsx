@@ -158,12 +158,12 @@ class DonationForm extends React.Component {
                                 />
                             <br/>
                         </div>
+                        <button 
+                            type = 'submit'
+                            className = 'submit_btn'
+                            >SUBMIT DONATION</button>
                     </form>
                 </div>
-                <button 
-                    type = 'submit'
-                    className = 'submit_btn'
-                    >SUBMIT DONATION</button>
             </div>
         )
     }

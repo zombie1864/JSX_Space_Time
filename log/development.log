@@ -60147,3 +60147,66 @@ Processing by Api::VideosController#index as JSON
 Completed 200 OK in 30ms (Views: 21.2ms | ActiveRecord: 3.0ms)
 
 
+Started GET "/" for ::1 at 2020-09-23 12:02:18 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 725ms (Views: 721.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-09-23 12:02:50 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 672ms (Views: 662.8ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for ::1 at 2020-09-23 12:02:53 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 58ms (Views: 54.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-09-23 12:02:55 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 82ms (Views: 78.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/api/donations" for ::1 at 2020-09-23 12:03:08 -0400
+Processing by Api::DonationsController#create as JSON
+  Parameters: {"donation"=>{"monthly_amount"=>"20", "first_name"=>"jak", "last_name"=>"Varela", "city"=>"BROOKLYN", "state"=>"NY", "zip_code"=>"11219-1712", "email"=>"jak2@gmail.com"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/donations_controller.rb:7
+  [1m[36mDonation Create (35.6ms)[0m  [1m[32mINSERT INTO "donations" ("monthly_amount", "first_name", "last_name", "city", "state", "zip_code", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["monthly_amount", "20"], ["first_name", "jak"], ["last_name", "Varela"], ["city", "BROOKLYN"], ["state", "NY"], ["zip_code", "11219-1712"], ["email", "jak2@gmail.com"], ["created_at", "2020-09-23 16:03:08.318656"], ["updated_at", "2020-09-23 16:03:08.318656"]]
+  ↳ app/controllers/api/donations_controller.rb:7
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/donations_controller.rb:7
+  Rendering api/donations/show.json.jbuilder
+  Rendered api/donations/_donation.json.jbuilder (0.3ms)
+  Rendered api/donations/show.json.jbuilder (2.3ms)
+Completed 200 OK in 85ms (Views: 11.9ms | ActiveRecord: 53.7ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-09-23 12:03:17 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (2.6ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (18.6ms)
+Completed 200 OK in 31ms (Views: 25.1ms | ActiveRecord: 2.6ms)
+
+
