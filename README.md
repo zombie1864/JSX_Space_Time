@@ -1,5 +1,7 @@
 # README
 
+![alt text](app/assets/images/JSX_Logo.png)
+
 * JSX Space Time is an app that helps mainstream video broadcast from PBS. Users can watch in depth discussions about the nature of reality with astrophysicist Matt O'Dowd, PhD. 
 
 * Technologies used to build the site are Ruby on Rails, React, and Redux. Ruby on Rails provides backend functionalities needed for an MVC framework to function and integrated is postGreSql that stores information as a database. React/Redux is used for frontend UI. React/Redux is used to fetch information to the frontend that will be rendered for the user. 
