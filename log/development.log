@@ -61837,3 +61837,12 @@ Processing by Api::VideosController#index as JSON
 Completed 200 OK in 34ms (Views: 22.1ms | ActiveRecord: 9.1ms)
 
 
+Started GET "/" for ::1 at 2020-09-24 15:25:50 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 911ms (Views: 907.5ms | ActiveRecord: 0.4ms)
+
+
