@@ -21,7 +21,7 @@ class ShowVideo extends React.Component {
                     <header>
                         <Link to = '/' className = 'header-link'>
                             <h1>
-                                <img className = 'home-icon' src={window.Home_icon} alt="HOME"/>
+                                <img className = 'home-icon' src={window.solar_system_favicon} alt="HOME"/>
                             </h1>
                         </Link>
                     </header> 

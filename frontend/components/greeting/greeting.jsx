@@ -9,7 +9,9 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     );
     const personalGreeting = () => (
         <hgroup className="header-group">
-            <h2 className="header-name"> Welcome to space-time {currentUser.first_name} {currentUser.last_name}</h2>
+            <h2 className="header-name"> 
+                Welcome to space-time {currentUser.first_name} {currentUser.last_name}
+            </h2>
             <button className="header-button" onClick={logout}>Log Out</button>
         </hgroup>
     );
