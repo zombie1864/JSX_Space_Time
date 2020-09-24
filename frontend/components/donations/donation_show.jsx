@@ -15,7 +15,7 @@ class DonationShow extends React.Component {
                     </header> 
                 </div>
 
-                {/* <img src={window.Thank_Card} alt="Thanks!" className = 'donation-thank-you-card'/> */}
+                <img src={window.Thank_Card} alt="Thanks!" className = 'donation-thank-you-card'/>
             </div>
         )
     }
