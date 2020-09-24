@@ -15,6 +15,7 @@
     border: solid 2px black;
     background-color: rgb(24, 36, 126);
     font-size: 13px;
+    font-family: Helvetica;
     color: whitesmoke;
     cursor: pointer;
 }
