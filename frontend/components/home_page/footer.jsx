@@ -26,9 +26,9 @@ class Footer extends React.Component {
                 </ul>
                 <ul className="footer-ul">
                     <li className="">
-                    <a href="" target = '_blank'
+                    <a href="https://angel.co/u/jeff-varela" target = '_blank'
                         className = 'footer-link'>
-                        Angellist
+                        AngelList
                     </a>
                     </li>
                 </ul>

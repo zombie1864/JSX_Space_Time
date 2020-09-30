@@ -63122,3 +63122,47 @@ Processing by Api::VideosController#index as JSON
 Completed 200 OK in 21ms (Views: 16.5ms | ActiveRecord: 1.8ms)
 
 
+Started GET "/" for ::1 at 2020-09-30 14:34:28 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 1182ms (Views: 1172.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-09-30 14:34:30 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.6ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (10.2ms)
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/videos/11" for ::1 at 2020-09-30 14:34:42 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"id"=>"11"}
+  [1m[36mVideo Load (11.3ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:7
+  Rendering api/videos/show.json.jbuilder
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/show.json.jbuilder (3.6ms)
+Completed 200 OK in 44ms (Views: 12.2ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-09-30 14:34:46 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (26.9ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (36.3ms)
+Completed 200 OK in 49ms (Views: 18.8ms | ActiveRecord: 26.9ms)
+
+
