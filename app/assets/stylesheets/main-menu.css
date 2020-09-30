@@ -13,15 +13,20 @@
 }
 
 .menu-taps {
+    /* background-color: red; */
+    padding: 26px;
     display: inline-block;
     align-items: center;
     font-family: Helvetica;
     font-size: large;
-    text-align: right;
+    text-align: center;
     position: relative;
     right: -1000px;
-    top: 25px;
     color: cornsilk;
     width: 100px;
     vertical-align: text-top;
+}
+
+.main-menu-on-the-right li:hover {
+    background-color: rgb(55, 73, 207);
 }

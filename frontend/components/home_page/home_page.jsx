@@ -20,7 +20,7 @@ export class HomePage extends React.Component {
                 <div className = 'signin-button'>
                     <GreetingContainer />
                 </div>
-                <nav >
+                <nav class = 'main-menu-on-the-right'>
                     <ul>
                         <Link
                             to = '/'
