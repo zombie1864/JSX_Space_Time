@@ -19,37 +19,37 @@ class ShowVideo extends React.Component {
             <div>
                 <div className = 'main-menu'>
                     <header>
-                        <Link to = '/' className = 'header-link'>
-                            <h1>
-                                <img className = 'home-icon' src={window.solar_system_favicon} alt="HOME"/>
-                            </h1>
-                        </Link>
+                    <Link to = '/' className = 'header-link'>
+                        <h1>
+                            <img className = 'home-icon' src={window.solar_system_favicon} alt="HOME"/>
+                        </h1>
+                    </Link>
                     </header> 
                     <div className = 'signin-button'>
                         <GreetingContainer />
                     </div>
-                    <nav >
-                    <ul>
-                        <Link
-                            to = '/'
-                            >
-                            <li className = 'menu-taps'>Home</li>
-                        </Link>
-                        {/* <li className = 'menu-taps'>Shows</li> */}
-                        {/* <li className = 'menu-taps'>Video</li> */}
-                        {/* <li className = 'menu-taps'>TV Schedules</li> */}
-                        {/* <li className = 'menu-taps'>Shop</li> */}
-                        <Link 
-                            to = '/donations' 
-                            >
-                            <li 
-                                className = 'menu-taps'
-                                >Donate</li>
-                        </Link>
-                    </ul>
+                    <nav class = 'main-menu-on-the-right'>
+                        <ul>
+                            <Link
+                                to = '/'
+                                >
+                                <li className = 'menu-taps'>Home</li>
+                            </Link>
+                            {/* <li className = 'menu-taps'>Shows</li> */}
+                            {/* <li className = 'menu-taps'>Video</li> */}
+                            {/* <li className = 'menu-taps'>TV Schedules</li> */}
+                            {/* <li className = 'menu-taps'>Shop</li> */}
+                            <Link 
+                                to = 'donations' 
+                                className = 'donation_page'
+                                >
+                                <li 
+                                    className = 'menu-taps'
+                                    >Donate</li>
+                            </Link>
+                        </ul>
                     </nav>
-                </div>   
-                <img src={video.image_url} width = '1280' height = '720' className = 'show-bck-img'/>
+                </div>                <img src={video.image_url} width = '1280' height = '720' className = 'show-bck-img'/>
                 <ReactPlayer
                 className='react-player'
                 url={video.video_url}
