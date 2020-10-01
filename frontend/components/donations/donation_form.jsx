@@ -77,6 +77,7 @@ class DonationForm extends React.Component {
                             >$</label>
                         <input  type='text' 
                                 name='monthly_amount' 
+                                required
                                 onChange={this.onChange} 
                                 value={this.state.monthly_amount} 
                                 className = 'input_style donation-float-left-amt'
@@ -87,7 +88,8 @@ class DonationForm extends React.Component {
                             >First Name:</label>
                         <br/>
                         <input  type='text' 
-                                name='first_name' 
+                                name='first_name'
+                                required 
                                 onChange={this.onChange} 
                                 value={this.state.first_name} 
                                 className = 'input_style donation-float-left-fname'
@@ -99,7 +101,8 @@ class DonationForm extends React.Component {
                                 >Last name:</label>
                             <br/>
                             <input  type='text' 
-                                    name='last_name' 
+                                    name='last_name'
+                                    required 
                                     onChange={this.onChange} 
                                     value={this.state.last_name} 
                                     className = 'input_style donation-float-right-lname'
@@ -112,6 +115,7 @@ class DonationForm extends React.Component {
                             <br/>
                             <input  type='text' 
                                     name='city' 
+                                    required
                                     onChange={this.onChange} 
                                     value={this.state.city}
                                     className = 'input_style donation-float-left-city'
@@ -125,6 +129,7 @@ class DonationForm extends React.Component {
                             <br/>
                             <input  type='text' 
                                     name='state' 
+                                    required
                                     onChange={this.onChange} 
                                     value={this.state.state}
                                     className = 'input_style donation-float-mid-state'
@@ -138,7 +143,8 @@ class DonationForm extends React.Component {
                                 >Zip Code:</label>
                                 <br/>
                             <input  type='text' 
-                                    name='zip_code' 
+                                    name='zip_code'
+                                    required 
                                     onChange={this.onChange} 
                                     value={this.state.zip_code}
                                     className = 'input_style donation-float-right-zip'
@@ -152,6 +158,7 @@ class DonationForm extends React.Component {
                             <br/>
                             <input  type='text' 
                                     name='email' 
+                                    required
                                     onChange={this.onChange} 
                                     value={this.state.email}
                                     className = 'input_style donation-float-left-email'
