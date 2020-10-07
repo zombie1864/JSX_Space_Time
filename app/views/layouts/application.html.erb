@@ -2,18 +2,24 @@
 <html>
   <head>
     <title>Jsx_Space_Time</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= favicon_link_tag 'solar-system_favicon.png' %>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <script type="text/javascript">
-      window.solar_system_favicon = "<%= image_url('solar-system_favicon.png') %>"
-      window.Home_icon = "<%= image_url('Home_icon.png')%>"
-      window.PBS_webpage_img = "<%= image_url('PBS-webpage-img.jpg') %>"
-      window.video_play_icon = "<%= image_url('video_play_icon.png') %>"
-      window.Thank_Card = "<%= image_url('Thank_Card.jpg') %>"
-    </script>
+    	<meta name="description" content="Full Stack Project" />
+      <meta name="title" property="og:title" content="Full Stack Project" />
+      <meta property="og:type" content="website" />
+      <meta name="image" property="og:image" content="https://live.staticflickr.com/65535/50432445061_ff34ebc759_z.jpg" />
+      <meta name="description" property="og:description" content="Full Stack Project" /><meta name="author" content="Jeff Varela" />
+
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+      <%= favicon_link_tag 'solar-system_favicon.png' %>
+      <%= stylesheet_link_tag    'application', media: 'all' %>
+      <%= javascript_include_tag 'application' %>
+      <script type="text/javascript">
+        window.solar_system_favicon = "<%= image_url('solar-system_favicon.png') %>"
+        window.Home_icon = "<%= image_url('Home_icon.png')%>"
+        window.PBS_webpage_img = "<%= image_url('PBS-webpage-img.jpg') %>"
+        window.video_play_icon = "<%= image_url('video_play_icon.png') %>"
+        window.Thank_Card = "<%= image_url('Thank_Card.jpg') %>"
+      </script>
   </head>
   <body>
     <%= yield %>

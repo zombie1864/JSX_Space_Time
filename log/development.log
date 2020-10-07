@@ -63210,3 +63210,50 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 926ms (Views: 904.0ms | ActiveRecord: 19.5ms)
 
 
+Started GET "/api/videos" for ::1 at 2020-10-01 19:10:05 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (15.9ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (1.2ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (53.5ms)
+Completed 200 OK in 78ms (Views: 49.0ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-02 09:21:02 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (38.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (12.3ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (312.5ms)
+Completed 200 OK in 422ms (Views: 339.9ms | ActiveRecord: 38.5ms)
+
+
+Started GET "/api/videos/12" for ::1 at 2020-10-02 09:21:04 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"id"=>"12"}
+  [1m[36mVideo Load (55.0ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:7
+  Rendering api/videos/show.json.jbuilder
+  Rendered api/videos/_video.json.jbuilder (2.0ms)
+  Rendered api/videos/show.json.jbuilder (35.6ms)
+Completed 200 OK in 222ms (Views: 64.1ms | ActiveRecord: 65.6ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-02 09:21:20 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (1.0ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.5ms)
+  Rendered api/videos/_video.json.jbuilder (0.2ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (22.3ms)
+Completed 200 OK in 63ms (Views: 29.8ms | ActiveRecord: 1.0ms)
+
+
