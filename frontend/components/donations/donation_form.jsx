@@ -81,6 +81,7 @@ class DonationForm extends React.Component {
                                 onChange={this.onChange} 
                                 value={this.state.monthly_amount} 
                                 className = 'input_style donation-float-left-amt'
+                                autoFocus
                             />                  
                         <br/>
                         <label 
