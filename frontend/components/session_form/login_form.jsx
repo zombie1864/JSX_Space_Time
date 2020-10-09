@@ -90,7 +90,7 @@ export class Login extends React.Component {
                     <button  
                         onClick = { this.demoUser }
                         className = 'demo-btn'
-                        >Sign in as demoUser</button>
+                        >Sign in as Demo User</button>
                 </form>
             </div>
         )
