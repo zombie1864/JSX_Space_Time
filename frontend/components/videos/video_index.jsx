@@ -21,8 +21,8 @@ class VideoIndex extends React.Component {
                         >
                         <img 
                             src={video.image_url} 
-                            width = '430' 
-                            height = '220'
+                            width = '100%' 
+                            height = '100%'
                             />
                         <img 
                             src={window.video_play_icon} alt="YES"
