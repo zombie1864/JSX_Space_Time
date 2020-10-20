@@ -1,6 +1,6 @@
 .main-menu {
     background-color: rgb(24, 36, 126);
-    width: 100%;
+    width: 200vh;
     height: 70px;
     display: flex;
     justify-content: left;    
@@ -25,6 +25,12 @@
     color: cornsilk;
     width: 100px;
     vertical-align: text-top;
+}
+
+.main-menu-on-the-right {
+    position: relative;
+    right: 900px;
+    margin: 0 auto;
 }
 
 .main-menu-on-the-right li:hover {
