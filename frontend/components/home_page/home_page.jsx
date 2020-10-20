@@ -63,9 +63,9 @@ export class HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className = 'index-videos'>
-                    <IndexVideoContainer/>
-                </div>
+                    <div className = 'index-videos'>
+                        <IndexVideoContainer/>
+                    </div>
                 <div>
                 <img className = 'home-bck-img' src={ window.PBS_webpage_img} alt="TEST"/>
                 </div>
