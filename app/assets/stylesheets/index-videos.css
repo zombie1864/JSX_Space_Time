@@ -18,14 +18,14 @@
     font-family: Helvetica,Arial,sans-serif;
     color: blanchedalmond;
     position: relative;
-    top: -80px;
+    top: -8vh;
 }
 
 .video_details {
     color: blanchedalmond;
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
-    top: -80px;
+    top: -6vh;
 }
 
 .video_play_icon {
