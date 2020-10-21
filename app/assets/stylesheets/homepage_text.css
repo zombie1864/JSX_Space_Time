@@ -5,8 +5,15 @@
 
 }
 
+.slogan {
+    color: cornsilk;
+    font-size: 35px;
+    font-family: Helvetica;
+    padding: 20px; 
+}
+
 .webpage-description {
-    color: rgba(255, 248, 220, 0.5);
+    color: rgb(211, 210, 206);
     width: 400px;
     line-height: 1.5;
     font-size: 17px;
@@ -15,7 +22,7 @@
 }
 
 .disclaimer-and-site {
-    color: rgba(255, 248, 220, 0.5);
+    color: rgb(211, 210, 206);
     font-size: 17px;
     padding-left: 20px;
     line-height: 1.5;
@@ -30,7 +37,7 @@
     background-color: rgba(0, 0, 0, 0);
     font-size: 17px;
     font-family: Helvetica;
-    color: rgba(255, 248, 220, 0.5);
+    color: rgb(211, 210, 206);
     padding: 10px; 
     opacity: 1;
 }
