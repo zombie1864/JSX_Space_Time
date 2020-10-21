@@ -1,7 +1,9 @@
 .modal-container {
     background-color: rgb(34, 34, 34);
-    width: 500px;
-    height: 680px;
+    /* width: 90vh; */
+    width: 140%;
+    height: 80vh;
+    /* height: 580%; */
     border: solid 2px rgb(4, 116, 245);
     border-radius: 5px;
 
@@ -30,22 +32,20 @@
     font-size: 22px;
     color: whitesmoke; 
     position: relative;
-    left: 55px; 
+    left: 85px; 
     top: 100px;
     background-color: rgb(24, 36, 126);
     border-radius: 10px;
     padding: 20px;
     padding-left: 80px;
     padding-right: 80px;
-    /* border: solid 2px black; */
-
 }
 
 .signup {
     color: rgb(89, 131, 194);
     font-size: 18px;
     position: relative;
-    left: 105px; 
+    left: 125px; 
     top: 120px;
 
 }
