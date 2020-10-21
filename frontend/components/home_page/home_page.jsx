@@ -11,11 +11,9 @@ export class HomePage extends React.Component {
             <div>
                 <div className = 'main-menu'>
                     <header>
-                    <Link to = '/' className = 'header-link'>
-                        <h1>
+                        <Link to = '/' className = 'header-link'>
                             <img className = 'home-icon' src={window.solar_system_favicon} alt="HOME"/>
-                        </h1>
-                    </Link>
+                        </Link>
                     </header> 
                     <div className = 'signin-button'>
                         <GreetingContainer />
