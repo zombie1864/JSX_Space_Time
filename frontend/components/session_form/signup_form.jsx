@@ -46,7 +46,7 @@ export class Signup extends React.Component {
     render() {
         return (
 
-            <div className = 'sign-up'>
+            <div className = 'sign-up-page'>
                 <div className = 'main-menu'>
                     <header>
                         <Link to = '/' className = 'signup-header-link'>
