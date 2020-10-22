@@ -49,21 +49,22 @@ class ShowVideo extends React.Component {
                             </Link>
                         </ul>
                     </nav>
-                </div>                <img src={video.image_url} width = '1280' height = '720' className = 'show-bck-img'/>
-                <ReactPlayer
-                className='react-player'
-                url={video.video_url}
-                width='50%'
-                height='50%'
-                />
-                <div className = 'show-container'>
-                    <p className = 'show-title'>
+                </div> 
+                <div className="video_text_container">
+                    <img src={video.image_url} width = '1280' height = '720' className = 'show-bck-img'/>
+                    <ReactPlayer
+                    className='react-player'
+                    url={video.video_url}
+                    width='100vh'
+                    height='50vh'
+                    />
+                    <p className = 'show-title' >
                         {video.title}
                     </p>
                     <p className = 'show-description'>
                         {video.description}
                     </p>
-                </div>
+                </div>               
             </div>
         )
     }
