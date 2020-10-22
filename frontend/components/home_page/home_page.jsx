@@ -41,6 +41,7 @@ export class HomePage extends React.Component {
                     </nav>
                 </div>
                 <div className = 'container'>
+                    <img className = 'home-bck-img' src={ window.PBS_webpage_img} alt="TEST"/>
                     <p className = 'slogan' >This is Space-time! 
                     </p>
                     <p className = 'webpage-description'>
@@ -65,7 +66,6 @@ export class HomePage extends React.Component {
                         <IndexVideoContainer/>
                     </div>
                 <div>
-                <img className = 'home-bck-img' src={ window.PBS_webpage_img} alt="TEST"/>
                 </div>
                 <div>
                     <Footer/>
