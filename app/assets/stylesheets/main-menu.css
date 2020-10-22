@@ -29,9 +29,10 @@
 }
 
 .main-menu-on-the-right {
-    position: relative;
-    right: 900px;
-    margin: 0 auto;
+    width: 350px;
+    position: absolute;
+    right: 90vw;
+    z-index: 1;
 }
 
 .main-menu-on-the-right li:hover {
