@@ -8,7 +8,7 @@ import Footer from './footer'
 export class HomePage extends React.Component {
     render() {
         return (
-            <div>
+            <div className = 'home_page'>
                 <div className = 'main-menu'>
                     <header>
                         <Link to = '/' className = 'header-link'>

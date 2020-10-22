@@ -69432,3 +69432,717 @@ Processing by Api::VideosController#index as JSON
 Completed 200 OK in 27ms (Views: 22.4ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/" for ::1 at 2020-10-22 14:55:36 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 138ms (Views: 134.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 14:55:37 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (2.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (11.1ms)
+Completed 200 OK in 23ms (Views: 17.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 14:55:43 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 81ms (Views: 78.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 14:55:43 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.3ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (8.2ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 14:55:51 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 80ms (Views: 77.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 14:55:52 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (3.8ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (14.3ms)
+Completed 200 OK in 30ms (Views: 23.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 14:55:58 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 72ms (Views: 69.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 14:55:59 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (1.9ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (10.9ms)
+Completed 200 OK in 21ms (Views: 16.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 14:56:07 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 57ms (Views: 53.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 14:56:08 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (9.3ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 14:56:38 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 14:56:38 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (10.1ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 14:57:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 700ms (Views: 697.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 14:57:57 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (1.0ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (11.5ms)
+Completed 200 OK in 25ms (Views: 20.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 14:58:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 83ms (Views: 80.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 14:58:06 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.9ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.3ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.2ms)
+  Rendered api/videos/index.json.jbuilder (25.6ms)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 14:58:12 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 88ms (Views: 85.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 14:58:12 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.3ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (12.2ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 14:58:23 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 14:58:23 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (8.3ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 14:58:39 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 75ms (Views: 72.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 14:58:39 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (8.6ms)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 14:59:58 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 153ms (Views: 149.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 14:59:59 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (1.5ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (16.6ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:00:46 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 84ms (Views: 80.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:00:46 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (2.6ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.3ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (11.9ms)
+Completed 200 OK in 36ms (Views: 17.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:01:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 85ms (Views: 81.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:01:19 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (9.5ms)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:01:26 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 90ms (Views: 88.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:01:26 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (2.9ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (17.0ms)
+Completed 200 OK in 28ms (Views: 22.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:01:38 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 68ms (Views: 66.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:01:39 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (1.6ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (9.7ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:01:44 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 80ms (Views: 76.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:01:44 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.8ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (11.0ms)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:01:50 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 74ms (Views: 71.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:01:51 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (1.5ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (12.7ms)
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:02:01 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 80ms (Views: 77.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:02:02 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (8.9ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:02:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 95ms (Views: 91.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:02:11 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.7ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (9.7ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:02:30 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 95ms (Views: 91.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:02:31 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (10.3ms)
+Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:03:00 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 86ms (Views: 83.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:03:00 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (1.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (9.6ms)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:03:13 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 79ms (Views: 75.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:03:13 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (8.5ms)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:03:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 69ms (Views: 66.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:03:34 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.5ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (9.4ms)
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:04:47 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 72ms (Views: 68.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:04:48 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (9.6ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:05:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 80ms (Views: 78.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:05:08 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (1.6ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.3ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (9.2ms)
+Completed 200 OK in 19ms (Views: 14.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:05:16 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 84ms (Views: 80.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:05:16 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.3ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (8.4ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:05:27 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 79ms (Views: 75.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:05:28 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.3ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (7.8ms)
+Completed 200 OK in 19ms (Views: 15.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:05:43 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 77ms (Views: 74.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:05:44 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (1.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.3ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (9.0ms)
+Completed 200 OK in 20ms (Views: 15.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:05:52 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 68ms (Views: 65.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:05:52 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.3ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (17.8ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:06:01 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 69ms (Views: 66.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:06:01 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (11.7ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:06:51 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 83ms (Views: 79.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:06:51 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (2.0ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (12.8ms)
+Completed 200 OK in 23ms (Views: 18.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:06:59 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 82ms (Views: 79.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:06:59 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.3ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (10.5ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-22 15:07:08 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 153ms (Views: 146.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 15:07:08 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (17.7ms)
+Completed 200 OK in 29ms (Views: 24.9ms | ActiveRecord: 0.4ms)
+
+
