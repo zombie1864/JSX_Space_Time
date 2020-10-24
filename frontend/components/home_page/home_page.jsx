@@ -20,9 +20,7 @@ export class HomePage extends React.Component {
                     </div>
                     <nav class = 'main-menu-on-the-right'>
                         <ul>
-                            <Link
-                                to = '/'
-                                >
+                            <Link to = '/'>
                                 <li className = 'menu-taps'>Home</li>
                             </Link>
                             {/* <li className = 'menu-taps'>Shows</li> */}
