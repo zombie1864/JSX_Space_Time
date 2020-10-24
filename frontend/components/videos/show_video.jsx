@@ -73,5 +73,3 @@ class ShowVideo extends React.Component {
 }
 
 export default ShowVideo
-
-// when refresh redux is wiped clean 

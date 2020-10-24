@@ -72075,3 +72075,108 @@ Processing by Api::VideosController#index as JSON
 Completed 200 OK in 21ms (Views: 17.6ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/api/videos" for ::1 at 2020-10-22 16:08:39 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (1.1ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.5ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (20.0ms)
+Completed 200 OK in 35ms (Views: 30.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 16:08:43 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/index.json.jbuilder (9.3ms)
+Completed 200 OK in 26ms (Views: 20.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 16:08:46 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.3ms)
+  Rendered api/videos/_video.json.jbuilder (0.2ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (11.6ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/videos/11" for ::1 at 2020-10-22 16:08:53 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"id"=>"11"}
+  [1m[36mVideo Load (0.8ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:7
+  Rendering api/videos/show.json.jbuilder
+  Rendered api/videos/_video.json.jbuilder (0.5ms)
+  Rendered api/videos/show.json.jbuilder (7.9ms)
+Completed 200 OK in 29ms (Views: 22.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 16:08:57 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.5ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (13.3ms)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/videos/10" for ::1 at 2020-10-22 16:08:57 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:7
+  Rendering api/videos/show.json.jbuilder
+  Rendered api/videos/_video.json.jbuilder (9.8ms)
+  Rendered api/videos/show.json.jbuilder (14.5ms)
+Completed 200 OK in 30ms (Views: 25.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 16:08:59 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.7ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.7ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (12.7ms)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/videos/12" for ::1 at 2020-10-22 16:09:01 -0400
+Processing by Api::VideosController#show as JSON
+  Parameters: {"id"=>"12"}
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT  "videos".* FROM "videos" WHERE "videos"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/videos_controller.rb:7
+  Rendering api/videos/show.json.jbuilder
+  Rendered api/videos/_video.json.jbuilder (0.7ms)
+  Rendered api/videos/show.json.jbuilder (5.7ms)
+Completed 200 OK in 22ms (Views: 16.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-22 16:09:03 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.9ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (10.8ms)
+Completed 200 OK in 24ms (Views: 18.9ms | ActiveRecord: 0.9ms)
+
+
