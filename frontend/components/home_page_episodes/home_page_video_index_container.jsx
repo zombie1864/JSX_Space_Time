@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import HomePageVideoIndex from './video_index';
+import HomePageVideoIndex from './home_page_video_index';
 import { fetchAllVideos} from '../../actions/video_actions';
 
 
