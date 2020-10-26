@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container'
 import IndexVideoContainer from '../videos/video_index_container'
+import HomePageVideoIndexContainer from '../home_page_episodes/home_page_video_index_container'
 import Footer from './footer'
 
 
@@ -64,7 +65,7 @@ export class HomePage extends React.Component {
                         <IndexVideoContainer/>
                     </div>
                 <div>
-
+                    <HomePageVideoIndexContainer/>
                 </div>
                 <div>
                     <Footer/>
