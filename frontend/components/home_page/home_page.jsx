@@ -64,7 +64,7 @@ export class HomePage extends React.Component {
                         <IndexVideoContainer/>
                     </div>
                 <div>
-                    
+
                 </div>
                 <div>
                     <Footer/>

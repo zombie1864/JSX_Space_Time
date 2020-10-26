@@ -12,4 +12,4 @@ const mdp = dispatch => ({
     fetchAllVideos: videos => dispatch(fetchAllVideos(videos))
 });
 
-export default connect(msp, mdp)(VideoIndex);
+export default connect(msp, mdp)(HomePageVideoIndex);
