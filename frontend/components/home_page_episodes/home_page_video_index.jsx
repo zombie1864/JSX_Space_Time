@@ -2,9 +2,7 @@ import React from 'react'
 
 class HomePageVideoIndex extends React.Component {
     render() {
-        return (
-            <div>
-                        const allVideos = this.props.videos.map(video => {
+        const allVideos = this.props.videos.map(video => {
             return (
             <li 
                 key = { video.id } 
@@ -40,8 +38,6 @@ class HomePageVideoIndex extends React.Component {
         return (
             <div>
                 {allVideos}
-            </div>
-        )
             </div>
         )
     }
