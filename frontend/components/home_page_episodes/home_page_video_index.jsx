@@ -36,7 +36,7 @@ class HomePageVideoIndex extends React.Component {
                     >{video.title}</p>
                 <p 
                     className = 'video_details'
-                    >{video.runtime}m</p>
+                    >{video.runtime}min</p>
             </li>
             )
         })
