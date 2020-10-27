@@ -1,6 +1,10 @@
 import React from 'react'
 
 class HomePageVideoIndex extends React.Component {
+    componentDidMount() {
+        this.props.fetchAllVideos(); 
+    }
+
     render() {
         const allVideos = this.props.videos.map(video => {
             return (
