@@ -12,7 +12,7 @@ class HomePageVideoIndex extends React.Component {
             return (
             <li 
                 key = { video.id } 
-                className = 'indexed-video'
+                className = 'indexed-video-ep'
                 >
                 <Link 
                     to = {`/videos/${video.id}`}
