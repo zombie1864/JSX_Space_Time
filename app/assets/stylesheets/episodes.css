@@ -13,3 +13,8 @@
     font-weight: bold;
     font-size: 1.3rem;
 }
+
+.eps_container {
+    position: relative;
+    left: 3%;
+}
