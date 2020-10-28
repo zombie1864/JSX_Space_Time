@@ -39,14 +39,19 @@ export class HomePage extends React.Component {
                         </ul>
                     </nav>
                 </div>
+                <img className = 'home-bck-img' src={ window.PBS_webpage_img} alt="TEST"/>
                 <div className = 'container'>
-                    <img className = 'home-bck-img' src={ window.PBS_webpage_img} alt="TEST"/>
-                    <p className = 'slogan' >This is Space-time! 
+
+                    <p className = 'slogan' >
+                        This is Space-time! 
                     </p>
+
                     <p className = 'webpage-description'>
                     Explore the universe and your mind with astrophysicist Matt O'Dowd PhD. 
                     </p>
+
                     <br/>
+
                     <div className = 'disclaimer-and-site'>
                         <p>
                             The following website is for educational and demonstrational purposes. All content is reserved and credited to PBS.
@@ -57,7 +62,8 @@ export class HomePage extends React.Component {
                                 href="https://www.pbs.org/show/pbs-space-time/"
                                 className = 'offical-site'
                                 target = '_blank'>
-                                    Visit Offical Site</a> 
+                                    Visit Offical Site
+                                    </a> 
                         </div>
                     </div>
                 </div>
