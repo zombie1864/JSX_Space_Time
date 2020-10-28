@@ -8,7 +8,8 @@ class HomePageVideoIndex extends React.Component {
     }
 
     render() {
-        const epVideos = this.props.videos.map(video => {
+        let subset = this.props.videos.slice(3, 6)
+        const epVideos = subset.map( video => {
             return (
                 <li 
                     key = { video.id } 

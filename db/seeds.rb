@@ -42,7 +42,7 @@ video3 = Video.create!(
 )
 
 video4 = Video.create!(
-    title: 'ow The Penrose Singularity Theorem Predicts The End of Space Time ',
+    title: 'How The Penrose Singularity Theorem Predicts The End of Space Time ',
     runtime: 16.58, 
     description: 'The Nobel prize in physics this year went to black holes. Generally speaking. Specifically, it was shared by the astronomers who revealed to us the Milky Way’s central black hole and by Roger Penrose, who proved that in general relativity, every black hole contains a place of infinite gravity - a singularity. But the true impact of Penrose’s singularity theorem would is much deeper  - it leads us to the limits Einstein’s great theory and to the origin of the universe.',
     video_url: 'https://www.youtube.com/watch?v=z4odQd8q3xY&t=887s&ab_channel=PBSSpaceTime'

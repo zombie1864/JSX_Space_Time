@@ -74412,3 +74412,393 @@ Processing by Api::VideosController#index as JSON
 Completed 200 OK in 28ms (Views: 24.3ms | ActiveRecord: 0.4ms)
 
 
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Destroy (6.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mVideo Destroy (69.2ms)[0m  [1m[31mDELETE FROM "videos"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "maxwell@spaceMail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "frArJM8JBxd36YiB8fZjMg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "$2a$12$.GYFDVVkeV3KRPitO2TuweX6yMhHWu8eSbcn3BVv0Tjg/c1H6UDru"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["first_name", "james"], ["last_name", "maxwell"], ["email", "maxwell@spaceMail.com"], ["password_digest", "$2a$12$.GYFDVVkeV3KRPitO2TuweX6yMhHWu8eSbcn3BVv0Tjg/c1H6UDru"], ["session_token", "frArJM8JBxd36YiB8fZjMg"], ["created_at", "2020-10-28 17:18:04.524342"], ["updated_at", "2020-10-28 17:18:04.524342"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mVideo Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."title" = $1 LIMIT $2[0m  [["title", "The Boundary Between Black Holes & Neutron Stars"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mVideo Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."video_url" = $1 LIMIT $2[0m  [["video_url", "https://www.youtube.com/watch?v=As7vWYmb5L8"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mVideo Create (0.4ms)[0m  [1m[32mINSERT INTO "videos" ("title", "runtime", "description", "video_url", "created_at", "updated_at", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "The Boundary Between Black Holes & Neutron Stars"], ["runtime", 15], ["description", "When we detected the very first gravitational wave, a new window was opened to the mysteries of the universe. We knew we’d see things previously thought impossible. And we just did - an object on the boundary between neutron stars and black holes, which promises to reveal the secrets of both."], ["video_url", "https://www.youtube.com/watch?v=As7vWYmb5L8"], ["created_at", "2020-10-28 17:18:04.545151"], ["updated_at", "2020-10-28 17:18:04.545151"], ["image_url", "video1_img.jpg"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mVideo Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."title" = $1 LIMIT $2[0m  [["title", "Computing a Universe Simulation"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mVideo Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."video_url" = $1 LIMIT $2[0m  [["video_url", "https://www.youtube.com/watch?v=0GLgZvTCbaA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:28
+  [1m[36mVideo Create (0.3ms)[0m  [1m[32mINSERT INTO "videos" ("title", "runtime", "description", "video_url", "created_at", "updated_at", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Computing a Universe Simulation"], ["runtime", 15], ["description", "I’m not saying the universe is a simulation. I mean it might be – I’m just not saying it. And perhaps it doesn’t make any difference. Even if this is the prime, the original physical universe, rather than somewhere deep in a simulation nest, we can STILL think of our universe’s underlying mechanics as computation. Imagine a universe in which the most elementary components are stripped of all properties besides some binary notion of existence or non-existence. Like, if the tiniest chunks of spacetime, or chunks of quantum fields, or elements in the abstract space of quantum-mechanical states can either be full or empty. These elements interact with their neighbors by a simple set of rules, leading to oscillations, elementary particles, atoms, and ultimately to all of the emergent laws of physics, physical structure, and ultimately the universe."], ["video_url", "https://www.youtube.com/watch?v=0GLgZvTCbaA"], ["created_at", "2020-10-28 17:18:04.548981"], ["updated_at", "2020-10-28 17:18:04.548981"], ["image_url", "video2_img.jpg"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mVideo Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."title" = $1 LIMIT $2[0m  [["title", "Does Gravity Require Extra Dimensions?"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mVideo Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."video_url" = $1 LIMIT $2[0m  [["video_url", "https://www.youtube.com/watch?v=z91oGI5aP0A"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mVideo Create (0.7ms)[0m  [1m[32mINSERT INTO "videos" ("title", "runtime", "description", "video_url", "created_at", "updated_at", "image_url") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Does Gravity Require Extra Dimensions?"], ["runtime", 16], ["description", "It’s been 120 years since Henry Cavendish measured the gravitational constant with a pair of lead balls suspended by a wire. The fundamental nature of gravity still eludes our best minds - but those secrets may be revealed by turning back to the Cavendish experiment. That steampunk contraption may even reveal the existence of extra dimensions of space."], ["video_url", "https://www.youtube.com/watch?v=z91oGI5aP0A"], ["created_at", "2020-10-28 17:18:04.552742"], ["updated_at", "2020-10-28 17:18:04.552742"], ["image_url", "video3_img.jpg"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mVideo Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."title" = $1 LIMIT $2[0m  [["title", "How The Penrose Singularity Theorem Predicts The End of Space Time "], ["LIMIT", 1]]
+  ↳ db/seeds.rb:44
+  [1m[36mVideo Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."video_url" = $1 LIMIT $2[0m  [["video_url", "https://www.youtube.com/watch?v=z4odQd8q3xY&t=887s&ab_channel=PBSSpaceTime"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:44
+  [1m[36mVideo Create (0.3ms)[0m  [1m[32mINSERT INTO "videos" ("title", "runtime", "description", "video_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "How The Penrose Singularity Theorem Predicts The End of Space Time "], ["runtime", 16], ["description", "The Nobel prize in physics this year went to black holes. Generally speaking. Specifically, it was shared by the astronomers who revealed to us the Milky Way’s central black hole and by Roger Penrose, who proved that in general relativity, every black hole contains a place of infinite gravity - a singularity. But the true impact of Penrose’s singularity theorem would is much deeper  - it leads us to the limits Einstein’s great theory and to the origin of the universe."], ["video_url", "https://www.youtube.com/watch?v=z4odQd8q3xY&t=887s&ab_channel=PBSSpaceTime"], ["created_at", "2020-10-28 17:18:04.556977"], ["updated_at", "2020-10-28 17:18:04.556977"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:51
+  [1m[36mVideo Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."title" = $1 LIMIT $2[0m  [["title", "The Edge of an Infinite Universe"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:51
+  [1m[36mVideo Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."video_url" = $1 LIMIT $2[0m  [["video_url", "https://www.youtube.com/watch?v=tJevBNQsKtU&ab_channel=PBSSpaceTime"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:51
+  [1m[36mVideo Create (0.3ms)[0m  [1m[32mINSERT INTO "videos" ("title", "runtime", "description", "video_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Edge of an Infinite Universe"], ["runtime", 18], ["description", "Have you ever asked “what is beyond the edge of the universe?” And have you ever been told that an infinite universe that has no edge? You were told wrong. In a sense. We can define a boundary to an infinite universe, at least mathematically. And it turns out that boundary may be as real or even more real than the universe it contains."], ["video_url", "https://www.youtube.com/watch?v=tJevBNQsKtU&ab_channel=PBSSpaceTime"], ["created_at", "2020-10-28 17:18:04.560641"], ["updated_at", "2020-10-28 17:18:04.560641"]]
+  ↳ db/seeds.rb:51
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:51
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:58
+  [1m[36mVideo Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."title" = $1 LIMIT $2[0m  [["title", "Why Quantum Computing Requires Quantum Cryptography"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mVideo Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "videos" WHERE "videos"."video_url" = $1 LIMIT $2[0m  [["video_url", "https://www.youtube.com/watch?v=pi7YwxxZQ5A&ab_channel=PBSSpaceTime"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mVideo Create (0.5ms)[0m  [1m[32mINSERT INTO "videos" ("title", "runtime", "description", "video_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Why Quantum Computing Requires Quantum Cryptography"], ["runtime", 17], ["description", "Quantum theory may seem like an obscure subject of questionable relevance to the average person. But in fact much of our technological world depends on our understanding of the quantum properties of the subatomic universe. And soon, perhaps very soon, we’ll be interacting with the weirdness of quantum mechanics even more directly – with the coming of quantum computing and the quantum internet. Quantum computing is a topic that’s that has been well covered, so we’re going to be talking about the quantum internet. Specifically quantum cryptography and quantum key distribution – the foundations of the prospective quantum internet. We may come back to quantum computer in detail – but for now let me show you why their advent will demand a quantum internet. "], ["video_url", "https://www.youtube.com/watch?v=pi7YwxxZQ5A&ab_channel=PBSSpaceTime"], ["created_at", "2020-10-28 17:18:04.564236"], ["updated_at", "2020-10-28 17:18:04.564236"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:58
+Started GET "/" for ::1 at 2020-10-28 13:18:07 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 566ms (Views: 561.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-28 13:18:08 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (13.2ms)
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-28 13:18:08 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.8ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (13.8ms)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-10-28 13:21:34 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 786ms (Views: 774.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-28 13:21:36 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.5ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (18.8ms)
+Completed 200 OK in 30ms (Views: 26.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-28 13:21:36 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (13.5ms)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-10-28 13:21:40 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-28 13:21:40 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (10.9ms)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-28 13:21:40 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.5ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (13.9ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-10-28 13:22:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 694ms (Views: 690.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-28 13:22:11 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (13.4ms)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-28 13:22:11 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.3ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.2ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (11.3ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-28 13:22:38 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 683ms (Views: 679.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-28 13:22:39 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (4.8ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (16.6ms)
+Completed 200 OK in 28ms (Views: 19.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-28 13:22:39 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.9ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.3ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.0ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (9.9ms)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-10-28 13:28:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 879ms (Views: 875.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-28 13:28:55 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.8ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (24.0ms)
+Completed 200 OK in 35ms (Views: 31.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-28 13:28:55 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (12.8ms)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-28 13:29:23 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 91ms (Views: 85.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-28 13:29:24 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.3ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.3ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (12.5ms)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-28 13:29:24 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (4.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (15.7ms)
+Completed 200 OK in 27ms (Views: 20.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for ::1 at 2020-10-28 13:29:30 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 644ms (Views: 641.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-28 13:29:31 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (0.4ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.7ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.7ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (14.3ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/videos" for ::1 at 2020-10-28 13:29:31 -0400
+Processing by Api::VideosController#index as JSON
+  Rendering api/videos/index.json.jbuilder
+  [1m[36mVideo Load (2.2ms)[0m  [1m[34mSELECT "videos".* FROM "videos"[0m
+  ↳ app/views/api/videos/index.json.jbuilder:1
+  Rendered api/videos/_video.json.jbuilder (0.4ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/_video.json.jbuilder (0.1ms)
+  Rendered api/videos/index.json.jbuilder (14.7ms)
+Completed 200 OK in 27ms (Views: 21.6ms | ActiveRecord: 2.2ms)
+
+
