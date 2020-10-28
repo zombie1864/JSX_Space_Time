@@ -44,7 +44,7 @@ class HomePageVideoIndex extends React.Component {
         return (
             <div>
                 <p className="episodes">
-                    episodes
+                    Episodes
                 </p>
                 {allVideos}
             </div>
