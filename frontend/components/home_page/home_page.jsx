@@ -40,7 +40,7 @@ export class HomePage extends React.Component {
                     </nav>
                 </div>
                 <img className = 'home-bck-img' src={ window.PBS_webpage_img} alt="TEST"/>
-                <div className = 'container'>
+                <div className = 'homepage_greeting_container'>
 
                     <p className = 'slogan' >
                         This is Space-time! 
