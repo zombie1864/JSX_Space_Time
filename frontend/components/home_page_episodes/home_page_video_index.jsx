@@ -8,7 +8,7 @@ class HomePageVideoIndex extends React.Component {
     }
 
     render() {
-        const allVideos = this.props.videos.map(video => {
+        const epVideos = this.props.videos.map(video => {
             return (
                 <li 
                     key = { video.id } 
@@ -47,7 +47,7 @@ class HomePageVideoIndex extends React.Component {
                     Episodes
                 </p>
                 <div className="eps_container">
-                    {allVideos}
+                    {epVideos}
                 </div>
             </div>
         )
