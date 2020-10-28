@@ -32,7 +32,7 @@ class HomePageVideoIndex extends React.Component {
                         </div>
                     </Link>
                     <p 
-                        className = 'video_details_title'
+                        className = 'video_details_title_ep'
                         >{video.title}</p>
                     <p 
                         className = 'video_details'

@@ -4,3 +4,12 @@
     font-size: 2.2rem;
     font-weight: bold;
 }
+
+.video_details_title_ep {
+    position: relative;
+    top: -8vh;
+    color: rgb(76, 118, 179);
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
