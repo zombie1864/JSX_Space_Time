@@ -46,7 +46,9 @@ class HomePageVideoIndex extends React.Component {
                 <p className="episodes">
                     Episodes
                 </p>
-                {allVideos}
+                <div className="eps_container">
+                    {allVideos}
+                </div>
             </div>
         )
     }
