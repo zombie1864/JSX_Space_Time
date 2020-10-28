@@ -7,7 +7,8 @@ class VideoIndex extends React.Component {
     }
 
     render() {
-        const allVideos = this.props.videos.map(video => {
+        let subset = this.props.videos.slice(0, 3)
+        const allVideos = subset.map(video => {
             return (
             <li 
                 key = { video.id } 
