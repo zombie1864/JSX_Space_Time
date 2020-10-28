@@ -1,9 +1,8 @@
-.index-videos {
+.homepage-index-videos {
     width: 100%;
     position: absolute;
     top: 450px;
-    left: 0;
-    padding-left: 220px;
+    left: 5%;
 }
 
 .indexed-video {

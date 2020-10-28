@@ -67,7 +67,7 @@ export class HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
-                    <div className = 'index-videos'>
+                    <div className = 'homepage-index-videos'>
                         <IndexVideoContainer/>
                     </div>
                 <div>
