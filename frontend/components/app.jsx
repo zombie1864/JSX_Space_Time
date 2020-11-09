@@ -8,6 +8,7 @@ import Modal from './modal/modal';
 import HomePage from './home_page/home_page'
 import DonationFormContainer from '../components/donations/donation_form_container'
 import DonationShow from './donations/donation_show'
+import Episodes from './episodes/episodes'
 
 const App = () => (
   <div> 
@@ -18,6 +19,7 @@ const App = () => (
           < Route path = '/videos/:id' component={ShowVideoContainer}/>
           < Route path = '/donations' component = {DonationFormContainer}/>
           < Route path = '/donation_show' component = {DonationShow}/>
+          < Route path = '/episodes' component = {Episodes}/>
           < Route path = '/' component = {HomePage}/>
       </Switch>
   </div>
