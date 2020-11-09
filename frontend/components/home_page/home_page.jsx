@@ -31,6 +31,7 @@ export class HomePage extends React.Component {
                             <Link 
                                 to = 'donations' 
                                 className = 'donation_page'
+                                target = '_blank'
                                 >
                                 <li 
                                     className = 'menu-taps'
