@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import VideoIndex from './video_index';
+import episodes from './episodes';
 import { fetchAllVideos} from '../../actions/video_actions';
 
 
@@ -12,4 +12,4 @@ const mdp = dispatch => ({
     fetchAllVideos: videos => dispatch(fetchAllVideos(videos))
 });
 
-export default connect(msp, mdp)(VideoIndex);
+export default connect(msp, mdp)(episodes);
