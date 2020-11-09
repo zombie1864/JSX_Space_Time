@@ -44,9 +44,11 @@ class HomePageEpisodesSection extends React.Component {
 
         return (
             <div>
-                <p className="episodes">
-                    Episodes
-                </p>
+                <Link to = 'episodes'>
+                    <p className="episodes">
+                        Episodes
+                    </p>
+                </Link>
                 <div className="eps_container">
                     {epVideos}
                 </div>

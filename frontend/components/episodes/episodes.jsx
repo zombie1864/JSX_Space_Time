@@ -1,6 +1,6 @@
 import React from 'react'
 
-class episodes extends React.Component {
+class Episodes extends React.Component {
     render() {
         return (
             <div>
@@ -10,4 +10,4 @@ class episodes extends React.Component {
     }
 }
 
-export default episodes
+export default Episodes
