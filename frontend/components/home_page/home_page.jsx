@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import GreetingContainer from '../greeting/greeting_container'
 import IndexVideoContainer from '../videos/video_index_container'
-import HomePageVideoIndexContainer from '../home_page_episodes/home_page_video_index_container'
+import HomePageEpisodesSectionContainer from '../home_page_episodes/home_page_episode_section__container'
 import Footer from './footer'
 
 
@@ -19,7 +19,7 @@ export class HomePage extends React.Component {
                     <div className = 'signin-button'>
                         <GreetingContainer />
                     </div>
-                    <nav class = 'main-menu-on-the-right'>
+                    <nav className = 'main-menu-on-the-right'>
                         <ul>
                             <Link to = '/'>
                                 <li className = 'menu-taps'>Home</li>
@@ -72,7 +72,7 @@ export class HomePage extends React.Component {
                         <IndexVideoContainer/>
                     </div>
                 <div>
-                    <HomePageVideoIndexContainer/>
+                    <HomePageEpisodesSectionContainer/>
                 </div>
                 <div>
                     <Footer/>
