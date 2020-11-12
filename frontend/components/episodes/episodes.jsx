@@ -1,4 +1,5 @@
 import React from 'react'
+import GreetingContainer from '../greeting/greeting_container'
 import { Link } from 'react-router-dom';
 
 class Episodes extends React.Component {
@@ -42,6 +43,36 @@ class Episodes extends React.Component {
 
         return (
             <div>
+                                <div className = 'main-menu'>
+                    <header>
+                        <Link to = '/' className = 'header-link'>
+                            <img className = 'home-icon' src={window.solar_system_favicon} alt="HOME"/>
+                        </Link>
+                    </header> 
+                    <div className = 'signin-button'>
+                        <GreetingContainer />
+                    </div>
+                    <nav className = 'main-menu-on-the-right'>
+                        <ul>
+                            <Link to = '/'>
+                                <li className = 'menu-taps'>Home</li>
+                            </Link>
+                            {/* <li className = 'menu-taps'>Shows</li> */}
+                            {/* <li className = 'menu-taps'>Video</li> */}
+                            {/* <li className = 'menu-taps'>TV Schedules</li> */}
+                            {/* <li className = 'menu-taps'>Shop</li> */}
+                            <Link 
+                                to = 'donations' 
+                                className = 'donation_page'
+                                target = '_blank'
+                                >
+                                <li 
+                                    className = 'menu-taps'
+                                    >Donate</li>
+                            </Link>
+                        </ul>
+                    </nav>
+                </div>
                 {allVideos}
             </div>
         )
