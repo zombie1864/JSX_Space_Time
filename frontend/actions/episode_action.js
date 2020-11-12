@@ -8,5 +8,5 @@ const receiveAllVideos = videos => ({
 )
 
 export const fetchAllVideos = () => dispatch => (
-    VideoAPIUtil.fetchAllVideos().then(videos => { dispatch(receiveAllVideos(videos))})    
+    EpisodeAPIUtil.fetchAllVideos().then(videos => { dispatch(receiveAllVideos(videos))})    
     ); 
