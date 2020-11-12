@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_12_170536) do
+ActiveRecord::Schema.define(version: 2020_11_12_174334) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "changes_to_my_list_videos", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "donations", force: :cascade do |t|
     t.string "monthly_amount", null: false
@@ -33,6 +38,8 @@ ActiveRecord::Schema.define(version: 2020_11_12_170536) do
     t.integer "video_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "myList_type"
+    t.bigint "my_list_videos_id"
     t.index ["user_id", "video_id"], name: "index_my_list_videos_on_user_id_and_video_id", unique: true
   end
 

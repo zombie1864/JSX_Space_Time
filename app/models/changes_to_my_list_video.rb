@@ -1,0 +1,2 @@
+class ChangesToMyListVideo < ApplicationRecord
+end
