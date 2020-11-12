@@ -10,7 +10,7 @@ class Api::VideosController < ApplicationController
     def myList
         mylist = MyListVideo.new(
             user_id: current_user.id, 
-            my_list_videos_id: params[:id]
+            my_list_videos_id: params[:id],
             myList_type: 'Video'
         )
         if like.save!
