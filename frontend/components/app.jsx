@@ -9,7 +9,6 @@ import HomePage from './home_page/home_page'
 import DonationFormContainer from '../components/donations/donation_form_container'
 import DonationShow from './donations/donation_show'
 import EpisodesContainer from './episodes/episodes_container'
-import Episodes from './episodes/episodes'
 
 const App = () => (
   <div> 
