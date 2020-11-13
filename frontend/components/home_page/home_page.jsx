@@ -65,6 +65,9 @@ export class HomePage extends React.Component {
                                 target = '_blank'>
                                     Visit Offical Site
                                     </a> 
+                            <Link to = 'myList'>
+                                myList
+                            </Link>
                         </div>
                     </div>
                 </div>
