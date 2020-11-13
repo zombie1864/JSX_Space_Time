@@ -40,7 +40,7 @@ class ShowVideo extends React.Component {
                     <div className = 'signin-button'>
                         <GreetingContainer />
                     </div>
-                    <nav class = 'main-menu-on-the-right'>
+                    <nav className = 'main-menu-on-the-right'>
                         <ul>
                             <Link
                                 to = '/'
@@ -77,10 +77,10 @@ class ShowVideo extends React.Component {
                         <p className = 'show-description'>
                             {video.description}
                         </p>
-                        <button onClick = {myListAction}>yes</button>
-                        {/* <span>{video.myList}</span> */}
                     </div>
                 </div>               
+        <button onClick = {myListAction}>{myListText}</button>
+                        <span>{video.myList}</span>
             </div>
         )
     }
