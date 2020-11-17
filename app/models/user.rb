@@ -6,6 +6,10 @@ class User < ApplicationRecord
 
     has_many :my_list_videos
 
+    has_many :my_listed_videos, 
+    through: :my_list_videos, 
+    source: :video
+
     def self.find_by_credentials(email, password) 
         user = User.find_by(email: email) 
         return nil unless user && user.is_password?(password) 
