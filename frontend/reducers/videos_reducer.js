@@ -8,7 +8,10 @@ const VideosReducer = ( state = {}, action ) => {
         case RECEIVE_VIDEO:
             return { [action.video.id]: action.video }
         case RECEIVE_MY_LIST_VIDEO_ID: 
-            return { [action.video.id]: action.video }
+            let state1 = merge({}, state); 
+            state1[action.video.id]['added_by_current_user'] = true;
+            state1[action.video.id].myLists = action.video.myLists;
+            return state1;
         default:
             return state;
     }
