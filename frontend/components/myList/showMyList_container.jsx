@@ -3,13 +3,14 @@ import ShowMyList from './showMyList';
 import { fetchAllVideos} from '../../actions/video_actions';
 
 
-const msp = state => ({
-    videos: Object.values(state.entities.videos)
+const msp = ( state, { session, entities: { users } }) => ({
+    videos: Object.values(state.entities.videos),
+    currentUser: users[session.id]
     }
 );
 
 const mdp = dispatch => ({
-    fetchAllVideos: videos => dispatch(fetchAllVideos(videos))
+    fetchMyList: currentUser => dispatch(fetchMyList(currentUser))
 });
 
 export default connect(msp, mdp)(ShowMyList);
