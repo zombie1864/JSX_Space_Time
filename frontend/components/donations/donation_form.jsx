@@ -44,13 +44,9 @@ class DonationForm extends React.Component {
         donation.append('donation[state]', state);
         donation.append('donation[zip_code]', zip_code);
         donation.append('donation[email]', email);
-        // debugger
         this.props.submitDonation(donation)
-        // .then(push to his); 
         this.setState(initialState)
-        this.props.history.push('/donation_show') // comes from props/React
-        //history.push -> redirects to url 
-
+        this.props.history.push('/donation_show') 
     }
 
     render() {

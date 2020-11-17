@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Greeting = ({ currentUser, logout, openModal }) => {
+    // debugger
     const sessionLinks = () => (
         <nav className="signin-signup">
             <button className = 'signin_button' onClick = { openModal}> Sign In </button>

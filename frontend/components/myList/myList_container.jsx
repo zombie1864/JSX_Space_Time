@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
+import { logout } from '../../actions/session_actions';
 import MyList from './myList';
-import { fetchAllVideos} from '../../actions/video_actions';
 
-
-const msp = state => ({
-    videos: Object.values(state.entities.videos)
-    }
-);
+const msp = ({ session, entities: { users } }) => {
+    return {
+        currentUser: users[session.id]
+    };
+};
 
 const mdp = dispatch => ({
-    fetchAllVideos: videos => dispatch(fetchAllVideos(videos))
+    logout: () => dispatch(logout()), 
 });
 
-export default connect(msp, mdp)(MyList);
+export default connect( msp, mdp )(MyList);

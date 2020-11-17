@@ -1,12 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-class VideoIndex extends React.Component {    
+class VideoIndex extends React.Component {  
+
     componentDidMount() {
         this.props.fetchAllVideos(); 
     }
-
+    
     render() {
+        const { submitToMyList } = this.props; 
+        let addToMyList = () => {}
+        if (!this.props.user) {
+            addToMyList = () => history.push('/login')
+        } else {
+            addToMyList = () => submitToMyList(video.id)
+        }
         let subset = this.props.videos.slice(0, 3)
         const allVideos = subset.map(video => {
             return (
@@ -37,6 +45,7 @@ class VideoIndex extends React.Component {
                 <p 
                     className = 'video_details'
                     >{video.runtime}m</p>
+                <button onClick = {addToMyList}> + myList </button>
             </li>
             )
         })

@@ -12,3 +12,9 @@ export const fetchVideo = id => (
     })
 );
 
+export const submitToMyList = video_id => (
+    $.ajax({
+        method: 'GET', 
+        url: `/api/videos/${video_id}`
+    })
+)

@@ -4,10 +4,12 @@ import GreetingContainer from '../greeting/greeting_container'
 import IndexVideoContainer from '../videos/video_index_container'
 import HomePageEpisodesSectionContainer from '../home_page_episodes/home_page_episode_section__container'
 import Footer from './footer'
-
+import MyListContainer from '../myList/myList_container'
 
 export class HomePage extends React.Component {
+
     render() {
+
         return (
             <div>
                 <div className = 'main-menu'>
@@ -65,9 +67,7 @@ export class HomePage extends React.Component {
                                 target = '_blank'>
                                     Visit Offical Site
                                     </a> 
-                            <Link to = 'myList'>
-                                myList
-                            </Link>
+                                    <MyListContainer/>
                         </div>
                     </div>
                 </div>

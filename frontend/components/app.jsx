@@ -9,8 +9,7 @@ import HomePage from './home_page/home_page'
 import DonationFormContainer from '../components/donations/donation_form_container'
 import DonationShow from './donations/donation_show'
 import EpisodesContainer from './episodes/episodes_container'
-import MyListContainer from './myList/myList_container'
-import HomePageMyList from './home_page_myList/home_page_myList'
+import ShowMyListContainer from './myList/showMyList_container'
 
 const App = () => (
   <div> 
@@ -22,7 +21,7 @@ const App = () => (
           < Route path = '/donations' component = {DonationFormContainer}/>
           < Route path = '/donation_show' component = {DonationShow}/>
           < Route path = '/episodes' component = {EpisodesContainer}/>          
-          < Route path = '/myList' component = {MyListContainer}/>
+          < Route path = '/myList' component = {ShowMyListContainer}/>
           < Route path = '/' component = {HomePage}/>
       </Switch>
   </div>

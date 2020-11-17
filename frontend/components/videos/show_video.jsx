@@ -10,23 +10,11 @@ class ShowVideo extends React.Component {
     }    
 
     render() {
-        // const { video, unListVideo } = this.props.video 
         const video = this.props.video 
-        let myListAction = () => {}
-        let myListText = 'myList'
-        // debugger
         if ( !video ) {
             return null; // this is needed so that the DOM can read the code below, componentDidMount will then mount and the code below will execute 
         } 
-        if (!this.props.user) {
-            myListAction = () => history.push('/login')
-        } else { 
-            myListAction = () => myListVideo(video.id);
-            if (video.myListed_by_current_user) {
-                myListText = 'UNDO'; 
-                // myListAction = () => unListVideo(video.id)
-            }
-        }
+
         return (
             <div className = 'video_show_page'>
                 <div className = 'main-menu'>
@@ -78,9 +66,7 @@ class ShowVideo extends React.Component {
                             {video.description}
                         </p>
                     </div>
-                </div>               
-        <button onClick = {myListAction}>{myListText}</button>
-                        <span>{video.myList}</span>
+                </div> 
             </div>
         )
     }
