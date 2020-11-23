@@ -7,6 +7,6 @@ const receivelist = list => ({
     list,
 });
 
-export const fecthMyList = currentUser => dispatch => (
-    ListApiUtil.fecthMyList(currentUser).then( list => dispatch(receivelist(list)))
+export const fetchMyList = currentUser => dispatch => (
+    ListApiUtil.fetchMyList(currentUser).then( list => dispatch(receivelist(list)))
 );

@@ -1,6 +1,6 @@
 import {RECEIVE_LIST} from '../actions/myList_action';
 
-export default ( state = {}, action ) => {
+const MyListsReducer = ( state = {}, action ) => {
     Object.freeze(state); 
     switch (action.type) {
         case RECEIVE_LIST: 
@@ -9,3 +9,5 @@ export default ( state = {}, action ) => {
         return state; 
     }
 }
+
+export default MyListsReducer; 

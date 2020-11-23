@@ -1,11 +1,13 @@
 import { connect } from 'react-redux';
 import ShowMyList from './showMyList';
-import { fetchAllVideos} from '../../actions/video_actions';
+import { fetchMyList} from '../../actions/myList_action';
 
 
-const msp = ( state, { session, entities: { users } }) => ({
-    videos: Object.values(state.entities.videos),
-    currentUser: users[session.id]
+const msp = ( { session, entities: { users } }) => ({
+    // videos: Object.values(state.entities.videos),
+    currentUser: users[session.id],
+    // currentUser: state.session.users.id,
+    // myList: Object.values(state.myList)
     }
 );
 
