@@ -4,10 +4,12 @@ class User < ApplicationRecord
     after_initialize :ensure_session_token 
     attr_reader :password 
 
-    has_many :my_list_videos
+    has_many :assignments, 
+    class_name: :MyListVideo, 
+    foreign_key: :user_id 
 
-    has_many :my_listed_videos, 
-    through: :my_list_videos, 
+    has_many :videos, 
+    through: :assignments, 
     source: :video
 
     def self.find_by_credentials(email, password) 
