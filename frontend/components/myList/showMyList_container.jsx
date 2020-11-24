@@ -3,11 +3,9 @@ import ShowMyList from './showMyList';
 import { fetchMyList} from '../../actions/myList_action';
 
 
-const msp = ( { session, entities: { users } }) => ({
-    // videos: Object.values(state.entities.videos),
-    currentUser: users[session.id],
-    // currentUser: state.session.users.id,
-    // myList: Object.values(state.myList)
+const msp = state => ({
+    currentUser: state.entities.users.id,
+    myLists: Object.values(state.entities.myLists)
     }
 );
 

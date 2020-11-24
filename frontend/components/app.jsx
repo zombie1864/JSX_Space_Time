@@ -21,7 +21,7 @@ const App = () => (
           < Route path = '/donations' component = {DonationFormContainer}/>
           < Route path = '/donation_show' component = {DonationShow}/>
           < Route path = '/episodes' component = {EpisodesContainer}/>          
-          < Route path = '/myList' component = {ShowMyListContainer}/>
+          < Route path = '/myLists' component = {ShowMyListContainer}/>
           < Route path = '/' component = {HomePage}/>
       </Switch>
   </div>

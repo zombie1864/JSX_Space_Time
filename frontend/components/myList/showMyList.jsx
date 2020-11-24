@@ -12,15 +12,12 @@ class ShowMyList extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchMyList(this.props.currentUser); // or users.id 
+        this.props.fetchMyList(this.props.currentUser); 
     }
-    // componentDidMount() {
-    //     this.props.fetchAllVideos(); 
-    // }
 
     renderShowMyList() {
         let videos = [] 
-        if (this.props.myList.length === 0 ) {
+        if (this.props.myLists.length === 0 ) {
             <p>No Videos Saved</p>
         } else {
             videos = this.props.myList 
@@ -62,39 +59,6 @@ class ShowMyList extends React.Component {
     }
 
     render() {
-        // const allVideos = this.props.videos.map(video => {
-        //     return (
-        //     <li 
-        //         key = { video.id } 
-        //         className = 'indexed-video'
-        //         >
-        //         <Link 
-        //             to = {`/videos/${video.id}`}
-        //             >
-        //             <div 
-        //                 className = 'index_video_container'
-        //                 >
-        //                 <img 
-        //                     src={video.image_url} 
-        //                     width = '100%' 
-        //                     height = '100%'
-        //                     />
-        //                 <img 
-        //                     src={window.video_play_icon} alt="YES"
-        //                     className = 'video_play_icon'
-        //                     />
-        //             </div>
-        //         </Link>
-        //         <p 
-        //             className = 'video_details_title'
-        //             >{video.title}</p>
-        //         <p 
-        //             className = 'video_details'
-        //             >{video.runtime}m</p>
-        //     </li>
-        //     )
-        // })
-
         return (
             <div>
                                 <div className = 'main-menu'>
@@ -111,10 +75,6 @@ class ShowMyList extends React.Component {
                             <Link to = '/'>
                                 <li className = 'menu-taps'>Home</li>
                             </Link>
-                            {/* <li className = 'menu-taps'>Shows</li> */}
-                            {/* <li className = 'menu-taps'>Video</li> */}
-                            {/* <li className = 'menu-taps'>TV Schedules</li> */}
-                            {/* <li className = 'menu-taps'>Shop</li> */}
                             <Link 
                                 to = 'donations' 
                                 className = 'donation_page'

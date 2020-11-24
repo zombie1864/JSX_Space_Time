@@ -26,10 +26,6 @@ export class HomePage extends React.Component {
                             <Link to = '/'>
                                 <li className = 'menu-taps'>Home</li>
                             </Link>
-                            {/* <li className = 'menu-taps'>Shows</li> */}
-                            {/* <li className = 'menu-taps'>Video</li> */}
-                            {/* <li className = 'menu-taps'>TV Schedules</li> */}
-                            {/* <li className = 'menu-taps'>Shop</li> */}
                             <Link 
                                 to = 'donations' 
                                 className = 'donation_page'
