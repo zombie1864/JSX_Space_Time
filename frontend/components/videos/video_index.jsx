@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router'
 
 class VideoIndex extends React.Component {  
 
@@ -11,9 +12,9 @@ class VideoIndex extends React.Component {
         const { submitToMyList } = this.props; 
         let addToMyList = () => {}
         if (!this.props.user) {
-            addToMyList = () => history.push('/login')
+        addToMyList = () => this.props.history.push('/login')
         } else {
-            addToMyList = () => submitToMyList(video.id)
+            addToMyList = () => submitToMyList(video.id) // THIS WORKS! console.log('YES')
         }
         let subset = this.props.videos.slice(0, 3)
         const allVideos = subset.map(video => {
@@ -58,4 +59,4 @@ class VideoIndex extends React.Component {
     }
 }
 
-export default VideoIndex
+export default withRouter(VideoIndex)
