@@ -4,13 +4,13 @@ import { fetchMyList} from '../../actions/myList_action';
 
 
 const msp = state => ({
-    currentUser: state.entities.users.id,
+    id: state.session.id,
     myLists: Object.values(state.entities.myLists)
     }
 );
 
 const mdp = dispatch => ({
-    fetchMyList: currentUser => dispatch(fetchMyList(currentUser))
+    fetchMyList: id => dispatch(fetchMyList(id))
 });
 
 export default connect(msp, mdp)(ShowMyList);

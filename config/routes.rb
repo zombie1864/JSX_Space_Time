@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy, :show]
     resources :videos, only: [:index, :show] 
     resources :donations, only: [:create]
-    resources :mylists, only: [:create, :show]
+    resources :my_list_videos, only: [:create, :show]
   end 
   root "static_pages#root"
 end

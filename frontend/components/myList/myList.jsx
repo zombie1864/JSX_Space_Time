@@ -6,7 +6,7 @@ const MyList = ({ currentUser }) => {
 
     const handleHistory = () => {
         if (currentUser) {
-            history.push('/myLists') 
+            history.push(`/myLists`) 
         } else {
             history.push("/login"); 
         }

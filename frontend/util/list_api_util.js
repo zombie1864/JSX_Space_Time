@@ -1,6 +1,6 @@
-export const fetchMyList = currentUser => (
+export const fetchMyList = id => (
     $.ajax({
-        url: `/api/myLists/${currentUser}`,
+        url: `/api/my_list_videos/${id}`,
         method: 'GET'
     })
 )

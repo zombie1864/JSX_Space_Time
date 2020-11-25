@@ -1,14 +1,13 @@
-class Api::MyListsController < ApplicationController
+class Api::MyListVideosController < ApplicationController
     def create
         MyListVideo.create(myList_params)
         @user = User.find(params[:myListData][:user_id])
-        render 'api/mylists/show'
-        # render :show
+        render "api/mylists/show"
     end
 
     def show
         @user = User.find(params[:id])
-        render 'api/mylists/show'
+        render "api/my_list_videos/show"
         # render :show
     end
 

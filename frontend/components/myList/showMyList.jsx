@@ -12,13 +12,15 @@ class ShowMyList extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchMyList(this.props.currentUser); 
+        this.props.fetchMyList(this.props.id); 
     }
 
     renderShowMyList() {
         let videos = [] 
         if (this.props.myLists.length === 0 ) {
-            <p>No Videos Saved</p>
+            return (
+                <p>No Videos Saved</p>
+            )
         } else {
             videos = this.props.myList 
             return (
